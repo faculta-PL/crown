@@ -1,0 +1,2756 @@
+<!DOCTYPE html>
+<html lang="en-US" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Protect Your Crown Beauty.Co — Luxury Afro Hair Braiding, Natural Crown Care & Botanical Oils</title>
+    <meta name="description" content="Premier Afro hair artistry house specializing in knotless braids, protective styling, textured hair treatments, and luxury scalp & growth oils. Protect Your Crown Beauty.Co.">
+    
+    <!-- Google Fonts: Cormorant Garamond (Luxury Editorial Serif) & Plus Jakarta Sans (Clean Modern Sans) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&family=Plus+Jakarta+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        forest: {
+                            DEFAULT: '#0F291E',
+                            light: '#183D2D',
+                            dark: '#091912',
+                        },
+                        gold: {
+                            DEFAULT: '#C5A059',
+                            light: '#DFC286',
+                            dark: '#9E7B36',
+                            muted: 'rgba(197, 160, 89, 0.25)',
+                        },
+                        ivory: {
+                            DEFAULT: '#FAF7F2',
+                            warm: '#F3EFE6',
+                            paper: '#FFFFFF',
+                        },
+                        charcoal: '#1C2420'
+                    },
+                    fontFamily: {
+                        serif: ['"Cormorant Garamond"', 'Georgia', 'serif'],
+                        sans: ['"Plus Jakarta Sans"', 'system-ui', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        /* ==========================================================
+           HUMAN-CRAFTED EDITORIAL LUXURY UX/UI
+           Awwwards / Oribe / Céline Standards — Zero AI Clichés
+           ========================================================== */
+        :root {
+            --ease-out-expo: cubic-bezier(0.19, 1, 0.22, 1);
+            --ease-editorial: cubic-bezier(0.22, 1, 0.36, 1);
+        }
+
+        body {
+            background-color: #FAF7F2;
+            color: #1C2420;
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            overflow-x: hidden;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        h1, h2, h3, h4, .font-editorial {
+            font-family: 'Cormorant Garamond', serif;
+            letter-spacing: -0.01em;
+        }
+
+        /* 2px Reading Progress Bar */
+        #scroll-progress {
+            position: fixed;
+            top: 0;
+            left: 0;
+            height: 2px;
+            background: linear-gradient(90deg, #9E7B36 0%, #DFC286 50%, #C5A059 100%);
+            width: 0%;
+            z-index: 60;
+            transition: width 0.12s var(--ease-out-expo);
+        }
+
+        /* Hairline Gold Borders */
+        .gold-border {
+            border-color: rgba(197, 160, 89, 0.28);
+        }
+
+        /* Directional Menu Links (Left-to-Right enter, Right-to-Left exit) */
+        .nav-link {
+            position: relative;
+            padding-bottom: 6px;
+            transition: color 0.45s var(--ease-editorial);
+        }
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 1px;
+            background-color: #C5A059;
+            transform: scaleX(0);
+            transform-origin: right;
+            transition: transform 0.55s var(--ease-out-expo);
+        }
+        .nav-link:hover::after,
+        .nav-link.is-active::after {
+            transform: scaleX(1);
+            transform-origin: left;
+        }
+
+        /* Refined Luxury Buttons with Curtain Fill & Dual-Arrow Glide */
+        .btn-editorial-primary,
+        .btn-editorial-gold,
+        .btn-editorial-outline {
+            position: relative;
+            overflow: hidden;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.75rem;
+            border-radius: 2px;
+            letter-spacing: 0.17em;
+            text-transform: uppercase;
+            font-size: 0.7rem;
+            font-weight: 500;
+            transition: color 0.55s var(--ease-out-expo), border-color 0.55s var(--ease-out-expo), transform 0.25s var(--ease-out-expo);
+            z-index: 1;
+            cursor: pointer;
+        }
+
+        .btn-editorial-primary {
+            background-color: #0F291E;
+            color: #FAF7F2;
+            border: 1px solid rgba(197, 160, 89, 0.6);
+        }
+        .btn-editorial-primary::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background-color: #C5A059;
+            transform: translateY(101%);
+            transition: transform 0.55s var(--ease-out-expo);
+            z-index: -1;
+        }
+        .btn-editorial-primary:hover {
+            color: #091912;
+            border-color: #C5A059;
+        }
+        .btn-editorial-primary:hover::before {
+            transform: translateY(0);
+        }
+
+        .btn-editorial-gold {
+            background-color: #C5A059;
+            color: #091912;
+            border: 1px solid #C5A059;
+            font-weight: 600;
+        }
+        .btn-editorial-gold::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background-color: #FAF7F2;
+            transform: translateY(101%);
+            transition: transform 0.55s var(--ease-out-expo);
+            z-index: -1;
+        }
+        .btn-editorial-gold:hover {
+            color: #0F291E;
+            border-color: #FAF7F2;
+        }
+        .btn-editorial-gold:hover::before {
+            transform: translateY(0);
+        }
+
+        .btn-editorial-outline {
+            background-color: transparent;
+            border: 1px solid rgba(197, 160, 89, 0.55);
+        }
+        .btn-editorial-outline::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background-color: rgba(197, 160, 89, 0.16);
+            transform: scaleX(0);
+            transform-origin: right;
+            transition: transform 0.55s var(--ease-out-expo);
+            z-index: -1;
+        }
+        .btn-editorial-outline:hover {
+            border-color: #C5A059;
+        }
+        .btn-editorial-outline:hover::before {
+            transform: scaleX(1);
+            transform-origin: left;
+        }
+
+        /* Physical Tactile Press */
+        .btn-editorial-primary:active,
+        .btn-editorial-gold:active,
+        .btn-editorial-outline:active {
+            transform: scale(0.985);
+        }
+
+        /* Dual-Arrow Editorial Micro-Interaction (Exits Right, Enters Left) */
+        .arrow-glide {
+            position: relative;
+            display: inline-flex;
+            width: 15px;
+            height: 15px;
+            overflow: hidden;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+        }
+        .arrow-glide svg {
+            width: 14px;
+            height: 14px;
+            transition: transform 0.55s var(--ease-out-expo);
+        }
+        .arrow-glide .arrow-first {
+            transform: translateX(0);
+        }
+        .arrow-glide .arrow-second {
+            position: absolute;
+            transform: translateX(-140%);
+        }
+        button:hover .arrow-glide .arrow-first,
+        a:hover .arrow-glide .arrow-first {
+            transform: translateX(140%);
+        }
+        button:hover .arrow-glide .arrow-second,
+        a:hover .arrow-glide .arrow-second {
+            transform: translateX(0);
+        }
+
+        /* Language Switcher */
+        .lang-switch {
+            display: inline-flex;
+            align-items: center;
+            border: 1px solid rgba(197, 160, 89, 0.45);
+            border-radius: 2px;
+            overflow: hidden;
+        }
+        .lang-btn {
+            padding: 0.35rem 0.65rem;
+            font-size: 0.65rem;
+            letter-spacing: 0.16em;
+            text-transform: uppercase;
+            font-weight: 600;
+            transition: background-color 0.4s var(--ease-out-expo), color 0.4s var(--ease-out-expo);
+        }
+        .lang-btn.is-active {
+            background-color: #0F291E;
+            color: #DFC286;
+        }
+        .lang-btn:not(.is-active) {
+            background-color: transparent;
+            color: #0F291E;
+        }
+        .lang-btn:not(.is-active):hover {
+            background-color: rgba(197, 160, 89, 0.15);
+        }
+
+        /* Editorial Tab Bar with Sliding Indicator */
+        .editorial-tabs-nav {
+            position: relative;
+            display: inline-flex;
+            flex-wrap: wrap;
+            border-bottom: 1px solid rgba(197, 160, 89, 0.28);
+        }
+        .editorial-tab {
+            position: relative;
+            padding: 0.9rem 1.45rem;
+            color: rgba(28, 36, 32, 0.55);
+            font-size: 0.7rem;
+            letter-spacing: 0.16em;
+            text-transform: uppercase;
+            transition: color 0.45s var(--ease-editorial);
+            background: transparent;
+        }
+        .editorial-tab sup {
+            font-family: 'Cormorant Garamond', serif;
+            font-style: italic;
+            font-size: 0.75rem;
+            color: #9E7B36;
+            margin-right: 0.35rem;
+            letter-spacing: 0;
+        }
+        .editorial-tab:hover {
+            color: #0F291E;
+        }
+        .editorial-tab.is-active {
+            color: #0F291E;
+            font-weight: 600;
+        }
+        .tab-sliding-indicator {
+            position: absolute;
+            bottom: -1px;
+            left: 0;
+            height: 2px;
+            background-color: #0F291E;
+            transition: transform 0.55s var(--ease-out-expo), width 0.55s var(--ease-out-expo);
+            pointer-events: none;
+        }
+
+        /* Editorial Cards & Slow Photographic Zoom */
+        .editorial-card {
+            background-color: #FFFFFF;
+            border: 1px solid rgba(197, 160, 89, 0.28);
+            border-radius: 2px;
+            transition: border-color 0.5s var(--ease-out-expo), background-color 0.5s var(--ease-out-expo);
+        }
+        .editorial-card:hover {
+            border-color: #C5A059;
+        }
+        .editorial-img-wrap {
+            overflow: hidden;
+            position: relative;
+        }
+        .editorial-img-wrap img,
+        .gallery-card img {
+            transition: transform 1.2s var(--ease-out-expo), filter 0.8s var(--ease-editorial);
+            will-change: transform;
+        }
+        .editorial-card:hover .editorial-img-wrap img,
+        .gallery-card:hover img {
+            transform: scale(1.04);
+        }
+
+        /* Editorial Inputs */
+        .editorial-field {
+            position: relative;
+        }
+        .editorial-input {
+            width: 100%;
+            background-color: transparent;
+            border: none;
+            border-bottom: 1px solid rgba(197, 160, 89, 0.38);
+            border-radius: 0;
+            padding: 0.75rem 0.2rem;
+            font-size: 0.875rem;
+            color: #0F291E;
+            transition: border-color 0.45s var(--ease-out-expo);
+        }
+        .editorial-input:focus {
+            outline: none;
+            border-bottom-color: #0F291E;
+        }
+        .editorial-field::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 1.5px;
+            background-color: #C5A059;
+            transform: scaleX(0);
+            transform-origin: left;
+            transition: transform 0.55s var(--ease-out-expo);
+            pointer-events: none;
+        }
+        .editorial-field:focus-within::after {
+            transform: scaleX(1);
+        }
+
+        /* Page Transitions */
+        .page-section {
+            display: none;
+            opacity: 0;
+        }
+        .page-section.active {
+            display: block;
+            animation: pageReveal 0.75s var(--ease-out-expo) forwards;
+        }
+        @keyframes pageReveal {
+            from {
+                opacity: 0;
+                transform: translateY(14px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Scroll Reveal */
+        .reveal-on-scroll {
+            opacity: 0;
+            transform: translateY(16px);
+            transition: opacity 0.8s var(--ease-out-expo), transform 0.8s var(--ease-out-expo);
+            transition-delay: var(--reveal-delay, 0ms);
+        }
+        .reveal-on-scroll.is-visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* Editorial Placeholder Tag */
+        .placeholder-tag {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.4rem;
+            padding: 0.22rem 0.65rem;
+            font-size: 0.66rem;
+            letter-spacing: 0.08em;
+            text-transform: uppercase;
+            background-color: #F3EFE6;
+            color: #6E521C;
+            border-left: 2px solid #C5A059;
+            font-weight: 500;
+        }
+        .placeholder-tag::before {
+            content: '';
+            width: 4px;
+            height: 4px;
+            background-color: #C5A059;
+        }
+
+        body.hide-placeholders .placeholder-tag {
+            background-color: transparent;
+            color: #0F291E;
+            border-left-color: #0F291E;
+            padding-left: 0.4rem;
+        }
+
+        @media (prefers-reduced-motion: reduce) {
+            *, ::before, ::after {
+                animation-duration: 0.01ms !important;
+                animation-iteration-count: 1 !important;
+                transition-duration: 0.01ms !important;
+                scroll-behavior: auto !important;
+            }
+            .reveal-on-scroll {
+                opacity: 1 !important;
+                transform: none !important;
+            }
+        }
+
+        ::-webkit-scrollbar {
+            width: 6px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #FAF7F2;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #0F291E;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #C5A059;
+        }
+    </style>
+</head>
+<body class="antialiased selection:bg-forest selection:text-gold-light flex flex-col min-h-screen">
+
+    <!-- READING PROGRESS BAR -->
+    <div id="scroll-progress" aria-hidden="true"></div>
+
+    <!-- TOP EDITORIAL ANNOUNCEMENT BAR -->
+    <div class="bg-forest-dark text-ivory/90 text-xs py-2.5 px-4 border-b border-gold/20">
+        <div class="max-w-7xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-2 text-center sm:text-left">
+            <p class="tracking-widest uppercase font-light flex items-center gap-2 text-[11px]">
+                <span class="w-1.5 h-1.5 bg-gold inline-block"></span>
+                <span data-i18n="top.banner">Protect Your Crown Beauty.Co — Luxury Afro Hair Braiding, Natural Crown Care & Botanical Oils</span>
+            </p>
+            <div class="flex items-center gap-5">
+                <button onclick="toggleEditorialPlaceholders()" id="toggle-placeholder-btn" class="text-[11px] text-gold-light hover:text-white underline underline-offset-4 transition cursor-pointer">
+                    Preview Mode: Editorial Placeholders Visible
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- MAIN STICKY NAVIGATION HEADER -->
+    <header id="main-header" class="sticky top-0 z-40 bg-ivory/95 backdrop-blur-md border-b gold-border transition-all duration-500">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div id="header-inner" class="flex justify-between items-center h-24 transition-all duration-500">
+                
+                <!-- Brand Emblem & Wordmark -->
+                <a href="#accueil" onclick="navigateTo('accueil'); return false;" class="flex items-center gap-3.5 group focus:outline-none" aria-label="Protect Your Crown Beauty.Co - Home">
+                    <div class="w-12 h-12 rounded-[2px] bg-forest flex items-center justify-center border border-gold/60 group-hover:border-gold transition-colors duration-500">
+                        <svg class="w-7 h-7 text-gold transition-transform duration-500 group-hover:scale-105" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M12 44L18 22L27 33L32 16L37 33L46 22L52 44H12Z" stroke="currentColor" stroke-width="2.2" stroke-linejoin="round"/>
+                            <path d="M10 49H54" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"/>
+                            <circle cx="32" cy="11" r="2.5" fill="currentColor"/>
+                            <circle cx="17" cy="17" r="2" fill="currentColor"/>
+                            <circle cx="47" cy="17" r="2" fill="currentColor"/>
+                        </svg>
+                    </div>
+                    <div class="flex flex-col">
+                        <span class="font-serif text-xl sm:text-2xl font-semibold tracking-wider text-forest uppercase leading-none">Protect Your Crown</span>
+                        <span class="text-[10px] tracking-[0.28em] uppercase text-gold-dark font-medium mt-1">Beauty.Co</span>
+                    </div>
+                </a>
+
+                <!-- Desktop Navigation Links -->
+                <nav class="hidden lg:flex items-center space-x-8" aria-label="Primary Navigation">
+                    <button onclick="navigateTo('accueil')" data-nav="accueil" data-i18n="nav.home" class="nav-link is-active text-xs uppercase tracking-[0.18em] font-medium text-forest">Home</button>
+                    <button onclick="navigateTo('prestations')" data-nav="prestations" data-i18n="nav.services" class="nav-link text-xs uppercase tracking-[0.18em] font-medium text-charcoal/70 hover:text-forest">Services</button>
+                    <button onclick="navigateTo('boutique')" data-nav="boutique" data-i18n="nav.shop" class="nav-link text-xs uppercase tracking-[0.18em] font-medium text-charcoal/70 hover:text-forest">Shop</button>
+                    <button onclick="navigateTo('apropos')" data-nav="apropos" data-i18n="nav.about" class="nav-link text-xs uppercase tracking-[0.18em] font-medium text-charcoal/70 hover:text-forest">About</button>
+                    <button onclick="navigateTo('contact')" data-nav="contact" data-i18n="nav.contact" class="nav-link text-xs uppercase tracking-[0.18em] font-medium text-charcoal/70 hover:text-forest">Contact</button>
+                </nav>
+
+                <!-- Right Actions: Language Switcher (EN-US Default / FR), Bag & Book Appointment -->
+                <div class="hidden sm:flex items-center gap-4">
+                    <!-- Bilingual Switcher -->
+                    <div class="lang-switch" role="group" aria-label="Language Selector">
+                        <button onclick="setLanguage('en')" data-lang-btn="en" class="lang-btn is-active" title="American English (Default)">EN</button>
+                        <button onclick="setLanguage('fr')" data-lang-btn="fr" class="lang-btn" title="Français">FR</button>
+                    </div>
+
+                    <!-- Bag Trigger -->
+                    <button onclick="toggleCartDrawer(true)" class="relative p-2.5 text-forest hover:text-gold-dark transition-colors duration-300 group active:scale-[0.985]" aria-label="Open Shopping Bag">
+                        <svg class="w-5 h-5 transition-transform duration-300 group-hover:-translate-y-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z"/>
+                        </svg>
+                        <span id="cart-badge" class="absolute top-0.5 right-0.5 w-4 h-4 rounded-[2px] bg-forest text-gold-light border border-gold/60 text-[10px] font-medium flex items-center justify-center">0</span>
+                    </button>
+
+                    <!-- Editorial Book CTA -->
+                    <button onclick="openBookingModal()" class="btn-editorial-primary px-6 py-3.5">
+                        <span data-i18n="nav.book">Book Appointment</span>
+                        <span class="arrow-glide text-gold-light" aria-hidden="true">
+                            <svg class="arrow-first" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
+                            <svg class="arrow-second" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
+                        </span>
+                    </button>
+                </div>
+
+                <!-- Mobile Controls -->
+                <div class="flex items-center gap-2.5 lg:hidden">
+                    <div class="lang-switch sm:hidden">
+                        <button onclick="setLanguage('en')" data-lang-btn="en" class="lang-btn is-active">EN</button>
+                        <button onclick="setLanguage('fr')" data-lang-btn="fr" class="lang-btn">FR</button>
+                    </div>
+                    <button onclick="toggleCartDrawer(true)" class="relative p-2 text-forest active:scale-[0.985]" aria-label="Shopping Bag">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.6" d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z"/>
+                        </svg>
+                        <span id="cart-badge-mobile" class="absolute top-0 right-0 w-4 h-4 rounded-[2px] bg-gold text-forest-dark text-[10px] font-bold flex items-center justify-center">0</span>
+                    </button>
+                    <button onclick="toggleMobileMenu()" id="mobile-menu-btn" class="p-2.5 text-forest hover:bg-forest/5 rounded-[2px] active:scale-[0.985]" aria-label="Main Menu">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M4 6h16M4 12h16M4 18h16"/>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mobile Menu Drawer -->
+        <div id="mobile-menu" class="hidden lg:hidden bg-ivory border-b gold-border px-6 pt-4 pb-8 space-y-4">
+            <div class="flex flex-col space-y-3">
+                <button onclick="navigateTo('accueil'); toggleMobileMenu();" data-i18n="nav.home" class="text-left font-serif text-2xl text-forest py-1.5 border-b border-gold/20">Home</button>
+                <button onclick="navigateTo('prestations'); toggleMobileMenu();" data-i18n="nav.services" class="text-left font-serif text-2xl text-forest py-1.5 border-b border-gold/20">Services</button>
+                <button onclick="navigateTo('boutique'); toggleMobileMenu();" data-i18n="nav.shop" class="text-left font-serif text-2xl text-forest py-1.5 border-b border-gold/20">Shop</button>
+                <button onclick="navigateTo('apropos'); toggleMobileMenu();" data-i18n="nav.about" class="text-left font-serif text-2xl text-forest py-1.5 border-b border-gold/20">About</button>
+                <button onclick="navigateTo('contact'); toggleMobileMenu();" data-i18n="nav.contact" class="text-left font-serif text-2xl text-forest py-1.5 border-b border-gold/20">Contact</button>
+            </div>
+            <div class="pt-2">
+                <button onclick="toggleMobileMenu(); openBookingModal();" class="w-full btn-editorial-primary py-4">
+                    <span data-i18n="nav.book">Book Appointment</span>
+                    <span class="arrow-glide text-gold-light">
+                        <svg class="arrow-first" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
+                        <svg class="arrow-second" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
+                    </span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- MAIN MULTI-PAGE CONTENT -->
+    <main class="flex-grow">
+
+        <!-- ==========================================
+             1. HOME PAGE (ACCUEIL)
+             ========================================== -->
+        <section id="page-accueil" class="page-section active">
+            
+            <!-- HERO SECTION -->
+            <div class="relative bg-forest text-ivory overflow-hidden border-b border-gold/30">
+                <div class="absolute inset-0 opacity-10 pointer-events-none" style="background-image: radial-gradient(#C5A059 1px, transparent 1px); background-size: 32px 32px;"></div>
+                
+                <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 md:py-24 lg:py-28 relative z-10">
+                    <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-10 items-center">
+                        
+                        <!-- Hero Copy -->
+                        <div class="lg:col-span-7 space-y-8 reveal-on-scroll">
+                            <div class="inline-flex items-center gap-3 px-4 py-1.5 rounded-[2px] bg-forest-light border border-gold/40">
+                                <span class="w-1.5 h-1.5 bg-gold"></span>
+                                <span data-i18n="hero.badge" class="text-xs uppercase tracking-[0.2em] text-gold-light">Luxury Afro Hair Sanctuary</span>
+                            </div>
+
+                            <h1 class="font-serif text-5xl sm:text-6xl lg:text-7xl font-normal tracking-tight leading-[1.06] text-ivory">
+                                Protect Your <span class="italic font-light text-gold-light">Crown</span>
+                            </h1>
+
+                            <p data-i18n="hero.subtitle" class="text-base sm:text-lg text-ivory/85 font-light leading-relaxed max-w-2xl">
+                                Your natural hair is royalty. We honor Black women’s coils, curls, and kinks through tension-free luxury braiding, restorative scalp rituals, and nutrient-rich botanical hair oils designed for length retention and lasting radiance.
+                            </p>
+
+                            <div class="flex flex-col sm:flex-row items-stretch sm:items-center gap-4 pt-2">
+                                <button onclick="navigateTo('prestations')" class="btn-editorial-gold px-8 py-4">
+                                    <span data-i18n="hero.cta.services">Explore Our Services</span>
+                                    <span class="arrow-glide">
+                                        <svg class="arrow-first" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
+                                        <svg class="arrow-second" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
+                                    </span>
+                                </button>
+                                <button onclick="openBookingModal()" class="btn-editorial-outline text-ivory px-8 py-4">
+                                    <span data-i18n="hero.cta.book">Book Appointment</span>
+                                    <span class="arrow-glide text-gold-light">
+                                        <svg class="arrow-first" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
+                                        <svg class="arrow-second" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
+                                    </span>
+                                </button>
+                            </div>
+
+                            <!-- 3 Brand Pillars -->
+                            <div class="grid grid-cols-3 gap-6 pt-8 border-t border-gold/20 max-w-xl">
+                                <div>
+                                    <p data-i18n="hero.pillar1.title" class="font-serif text-xl sm:text-2xl text-gold-light">Master Braiding</p>
+                                    <p data-i18n="hero.pillar1.desc" class="text-xs text-ivory/70 mt-1">Knotless braids, cornrows & protective artistry</p>
+                                </div>
+                                <div>
+                                    <p data-i18n="hero.pillar2.title" class="font-serif text-xl sm:text-2xl text-gold-light">Textured Care</p>
+                                    <p data-i18n="hero.pillar2.desc" class="text-xs text-ivory/70 mt-1">Deep hydration for 3B–4C natural crowns</p>
+                                </div>
+                                <div>
+                                    <p data-i18n="hero.pillar3.title" class="font-serif text-xl sm:text-2xl text-gold-light">Crown Elixirs</p>
+                                    <p data-i18n="hero.pillar3.desc" class="text-xs text-ivory/70 mt-1">Scalp & hair oils for strength and shine</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Editorial Afro Portrait Column -->
+                        <div class="lg:col-span-5 relative">
+                            <div class="relative mx-auto max-w-md lg:max-w-none group">
+                                <div class="absolute -inset-3 border border-gold/40 translate-x-3 translate-y-3 pointer-events-none transition-transform duration-700 group-hover:translate-x-2 group-hover:translate-y-2"></div>
+                                
+                                <div class="relative overflow-hidden bg-forest-light aspect-[4/5] border border-gold/40">
+                                    <img 
+                                        src="https://images.unsplash.com/photo-1611432579699-484f7990b127?auto=format&fit=crop&w=1000&q=85" 
+                                        alt="Portrait of a Black African woman wearing long intricate Fulani and knotless braids" 
+                                        class="w-full h-full object-cover object-top transition-transform duration-1000 ease-out group-hover:scale-105"
+                                        onerror="this.src='https://placehold.co/800x1000/0F291E/C5A059?text=African+Braids+Crown'"
+                                    >
+                                    <div class="absolute inset-0 bg-gradient-to-t from-forest-dark/85 via-transparent to-transparent"></div>
+                                    <div class="absolute bottom-6 left-6 right-6 p-5 bg-forest-dark/90 backdrop-blur-md border-l-2 border-gold">
+                                        <p data-i18n="hero.quote" class="font-serif italic text-lg text-gold-light">“Elevating African protective braiding without ever compromising the health of your edges or 4C natural coils.”</p>
+                                        <p class="text-[10px] uppercase tracking-[0.22em] text-ivory/70 mt-1">Protect Your Crown Beauty.Co</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+            <!-- AFRICAN BRAIDING STYLES & TEXTURE GUIDE (NEW EDITORIAL SHOWCASE) -->
+            <div class="py-16 bg-ivory-warm border-b gold-border">
+                <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                    <div class="flex flex-col md:flex-row md:items-end justify-between mb-10 gap-4 reveal-on-scroll">
+                        <div>
+                            <span data-i18n="stylesBar.tag" class="text-xs uppercase tracking-[0.25em] text-gold-dark font-semibold">African Hair Heritage & Protective Styles</span>
+                            <h2 data-i18n="stylesBar.title" class="font-serif text-3xl sm:text-4xl text-forest mt-1">Specialists in Black & African Hairstyles</h2>
+                        </div>
+                        <p data-i18n="stylesBar.sub" class="text-xs sm:text-sm text-charcoal/75 max-w-md">
+                            Dedicated 100% to Black women’s kinky, coily, and textured hair (Types 3C, 4A, 4B & 4C) with authentic African braiding artistry.
+                        </p>
+                    </div>
+
+                    <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-4">
+                        <div onclick="navigateTo('prestations')" class="editorial-card p-3 cursor-pointer group reveal-on-scroll" style="--reveal-delay: 0ms;">
+                            <div class="editorial-img-wrap aspect-[4/5] bg-forest mb-3">
+                                <img src="https://images.unsplash.com/photo-1611432579699-484f7990b127?auto=format&fit=crop&w=500&q=80" alt="Black woman with Knotless Box Braids" class="w-full h-full object-cover object-top">
+                            </div>
+                            <p class="text-[10px] uppercase tracking-[0.18em] text-gold-dark font-semibold">01 · Waist / Mid-Back</p>
+                            <h3 data-i18n="stylesBar.s1" class="font-serif text-lg text-forest group-hover:text-gold-dark transition-colors">Knotless Braids</h3>
+                        </div>
+
+                        <div onclick="navigateTo('prestations')" class="editorial-card p-3 cursor-pointer group reveal-on-scroll" style="--reveal-delay: 60ms;">
+                            <div class="editorial-img-wrap aspect-[4/5] bg-forest mb-3">
+                                <img src="https://images.unsplash.com/photo-1589156280159-27698a70f29e?auto=format&fit=crop&w=500&q=80" alt="African woman with Fulani Tribal Cornrows" class="w-full h-full object-cover object-top">
+                            </div>
+                            <p class="text-[10px] uppercase tracking-[0.18em] text-gold-dark font-semibold">02 · Tribal Artistry</p>
+                            <h3 data-i18n="stylesBar.s2" class="font-serif text-lg text-forest group-hover:text-gold-dark transition-colors">Fulani & Stitch Cornrows</h3>
+                        </div>
+
+                        <div onclick="navigateTo('prestations')" class="editorial-card p-3 cursor-pointer group reveal-on-scroll" style="--reveal-delay: 120ms;">
+                            <div class="editorial-img-wrap aspect-[4/5] bg-forest mb-3">
+                                <img src="https://images.unsplash.com/photo-1596815064285-45ed8a9c0463?auto=format&fit=crop&w=500&q=80" alt="Black woman with Boho Goddess Braids" class="w-full h-full object-cover object-top">
+                            </div>
+                            <p class="text-[10px] uppercase tracking-[0.18em] text-gold-dark font-semibold">03 · Curly Ends</p>
+                            <h3 data-i18n="stylesBar.s3" class="font-serif text-lg text-forest group-hover:text-gold-dark transition-colors">Boho & Goddess Braids</h3>
+                        </div>
+
+                        <div onclick="navigateTo('prestations')" class="editorial-card p-3 cursor-pointer group reveal-on-scroll" style="--reveal-delay: 180ms;">
+                            <div class="editorial-img-wrap aspect-[4/5] bg-forest mb-3">
+                                <img src="https://images.unsplash.com/photo-1531123897727-8f129e1688ce?auto=format&fit=crop&w=500&q=80" alt="Black woman with Senegalese Passion Twists" class="w-full h-full object-cover object-top">
+                            </div>
+                            <p class="text-[10px] uppercase tracking-[0.18em] text-gold-dark font-semibold">04 · Rope Twists</p>
+                            <h3 data-i18n="stylesBar.s4" class="font-serif text-lg text-forest group-hover:text-gold-dark transition-colors">Senegalese & Passion Twists</h3>
+                        </div>
+
+                        <div onclick="navigateTo('prestations')" class="editorial-card p-3 cursor-pointer group reveal-on-scroll" style="--reveal-delay: 240ms;">
+                            <div class="editorial-img-wrap aspect-[4/5] bg-forest mb-3">
+                                <img src="https://images.unsplash.com/photo-1567532939604-b6b5b0db2604?auto=format&fit=crop&w=500&q=80" alt="Black woman with Soft Locs and Faux Locs" class="w-full h-full object-cover object-top">
+                            </div>
+                            <p class="text-[10px] uppercase tracking-[0.18em] text-gold-dark font-semibold">05 · Loc Artistry</p>
+                            <h3 data-i18n="stylesBar.s5" class="font-serif text-lg text-forest group-hover:text-gold-dark transition-colors">Butterfly & Soft Locs</h3>
+                        </div>
+
+                        <div onclick="navigateTo('prestations')" class="editorial-card p-3 cursor-pointer group reveal-on-scroll" style="--reveal-delay: 300ms;">
+                            <div class="editorial-img-wrap aspect-[4/5] bg-forest mb-3">
+                                <img src="https://images.unsplash.com/photo-1523824921871-d6f1a15151f1?auto=format&fit=crop&w=500&q=80" alt="African woman with natural 4C Afro hair crown" class="w-full h-full object-cover object-top">
+                            </div>
+                            <p class="text-[10px] uppercase tracking-[0.18em] text-gold-dark font-semibold">06 · 4A–4C Coils</p>
+                            <h3 data-i18n="stylesBar.s6" class="font-serif text-lg text-forest group-hover:text-gold-dark transition-colors">4C Afro & Silk Press Care</h3>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- BRAND PHILOSOPHY -->
+            <div class="py-20 md:py-28 bg-ivory">
+                <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center space-y-6 reveal-on-scroll">
+                    <span data-i18n="phil.tag" class="text-xs uppercase tracking-[0.25em] text-gold-dark font-semibold">Our Philosophy</span>
+                    <h2 data-i18n="phil.title" class="font-serif text-3xl sm:text-5xl text-forest font-normal leading-tight">
+                        Where Regal Afro Aesthetics Meet Holistic Crown Care
+                    </h2>
+                    <div class="w-16 h-px bg-gold mx-auto my-4"></div>
+                    <p data-i18n="phil.body" class="text-base sm:text-lg text-charcoal/80 leading-relaxed font-light">
+                        At Protect Your Crown Beauty.Co, every textured crown is treated with reverence, precision, and gentle care. Our house unites the heritage of African braiding, targeted moisture treatments for natural curls and coils, and nourishing hair oils to deliver enduring protection and effortless sophistication.
+                    </p>
+                </div>
+            </div>
+
+            <!-- SIGNATURE SERVICES & PRODUCTS PREVIEW -->
+            <div class="py-20 bg-ivory-warm border-y gold-border">
+                <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                    <div class="flex flex-col md:flex-row md:items-end justify-between mb-14 gap-6 reveal-on-scroll">
+                        <div>
+                            <span data-i18n="feat.tag" class="text-xs uppercase tracking-[0.25em] text-gold-dark font-semibold">Artistry & Rituals</span>
+                            <h2 data-i18n="feat.title" class="font-serif text-3xl sm:text-5xl text-forest mt-2">Signature Braids, Care & Oils</h2>
+                        </div>
+                        <div class="flex flex-wrap gap-3">
+                            <button onclick="navigateTo('prestations')" class="btn-editorial-outline text-forest px-6 py-3.5">
+                                <span data-i18n="feat.btn.services">View All Services</span>
+                            </button>
+                            <button onclick="navigateTo('boutique')" class="btn-editorial-primary px-6 py-3.5">
+                                <span data-i18n="feat.btn.shop">Explore The Shop</span>
+                                <span class="arrow-glide text-gold-light">
+                                    <svg class="arrow-first" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
+                                    <svg class="arrow-second" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
+                                </span>
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- 3 Pillars Grid -->
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                        
+                        <!-- Pillar 1: Braiding -->
+                        <div class="editorial-card flex flex-col justify-between group reveal-on-scroll" style="--reveal-delay: 0ms;">
+                            <div>
+                                <div class="editorial-img-wrap h-72 bg-forest">
+                                    <img 
+                                        src="https://images.unsplash.com/photo-1611432579699-484f7990b127?auto=format&fit=crop&w=800&q=85" 
+                                        alt="Black African woman with long knotless braids and clean parting" 
+                                        class="w-full h-full object-cover object-top"
+                                        onerror="this.src='https://placehold.co/600x500/0F291E/C5A059?text=African+Braiding'"
+                                    >
+                                    <span data-i18n="feat.card1.badge" class="absolute top-4 left-4 bg-forest/95 text-gold-light text-[10px] uppercase tracking-[0.2em] px-3 py-1.5 border border-gold/30">
+                                        01 · Salon Artistry
+                                    </span>
+                                </div>
+                                <div class="p-8">
+                                    <h3 data-i18n="feat.card1.title" class="font-serif text-2xl text-forest font-medium group-hover:text-gold-dark transition-colors">Knotless Braids, Fulani & Twists</h3>
+                                    <p data-i18n="feat.card1.desc" class="text-sm text-charcoal/75 mt-3 leading-relaxed">
+                                        Flawlessly parted Smedium & Jumbo Knotless Braids, Fulani tribal cornrows, Boho curls, and Senegalese twists crafted with zero-tension technique to protect your edges.
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="px-8 pb-7 pt-4 border-t border-gold/20 flex items-center justify-between gap-2">
+                                <span data-i18n="common.quotePlaceholder" class="placeholder-tag">Price & Duration: Upon Consultation</span>
+                                <button onclick="navigateTo('prestations')" class="text-xs uppercase tracking-[0.18em] font-semibold text-forest hover:text-gold-dark flex items-center gap-1.5 active:scale-[0.985]">
+                                    <span data-i18n="common.discover">Discover</span>
+                                    <span class="arrow-glide">
+                                        <svg class="arrow-first" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
+                                        <svg class="arrow-second" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
+                                    </span>
+                                </button>
+                            </div>
+                        </div>
+
+                        <!-- Pillar 2: Natural Crown Care -->
+                        <div class="editorial-card flex flex-col justify-between group reveal-on-scroll" style="--reveal-delay: 90ms;">
+                            <div>
+                                <div class="editorial-img-wrap h-72 bg-forest">
+                                    <img 
+                                        src="https://images.unsplash.com/photo-1523824921871-d6f1a15151f1?auto=format&fit=crop&w=800&q=85" 
+                                        alt="Black woman celebrating her natural 4C Afro crown hair texture" 
+                                        class="w-full h-full object-cover object-top"
+                                        onerror="this.src='https://placehold.co/600x500/0F291E/C5A059?text=4C+Natural+Crown'"
+                                    >
+                                    <span data-i18n="feat.card2.badge" class="absolute top-4 left-4 bg-forest/95 text-gold-light text-[10px] uppercase tracking-[0.2em] px-3 py-1.5 border border-gold/30">
+                                        02 · Treatment & Prep
+                                    </span>
+                                </div>
+                                <div class="p-8">
+                                    <h3 data-i18n="feat.card2.title" class="font-serif text-2xl text-forest font-medium group-hover:text-gold-dark transition-colors">4C Afro Hair & Scalp Treatments</h3>
+                                    <p data-i18n="feat.card2.desc" class="text-sm text-charcoal/75 mt-3 leading-relaxed">
+                                        Deep steam hydration, Chebe & botanical moisture masks, scalp detox rituals, and pre-braid blow-out stretching designed specifically for kinky and coily hair.
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="px-8 pb-7 pt-4 border-t border-gold/20 flex items-center justify-between gap-2">
+                                <span data-i18n="common.quotePlaceholder" class="placeholder-tag">Price & Duration: Upon Consultation</span>
+                                <button onclick="navigateTo('prestations')" class="text-xs uppercase tracking-[0.18em] font-semibold text-forest hover:text-gold-dark flex items-center gap-1.5 active:scale-[0.985]">
+                                    <span data-i18n="common.discover">Discover</span>
+                                    <span class="arrow-glide">
+                                        <svg class="arrow-first" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
+                                        <svg class="arrow-second" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
+                                    </span>
+                                </button>
+                            </div>
+                        </div>
+
+                        <!-- Pillar 3: Botanical Oils -->
+                        <div class="editorial-card flex flex-col justify-between group reveal-on-scroll" style="--reveal-delay: 180ms;">
+                            <div>
+                                <div class="editorial-img-wrap h-72 bg-forest">
+                                    <img 
+                                        src="https://images.unsplash.com/photo-1608248597359-0e6d526a6c18?auto=format&fit=crop&w=800&q=85" 
+                                        alt="Luxury dropper bottles of Protect Your Crown hair oils" 
+                                        class="w-full h-full object-cover"
+                                        onerror="this.src='https://placehold.co/600x500/0F291E/C5A059?text=Botanical+Hair+Oils'"
+                                    >
+                                    <span data-i18n="feat.card3.badge" class="absolute top-4 left-4 bg-gold text-forest-dark font-semibold text-[10px] uppercase tracking-[0.2em] px-3 py-1.5">
+                                        03 · Official Apothecary
+                                    </span>
+                                </div>
+                                <div class="p-8">
+                                    <h3 data-i18n="feat.card3.title" class="font-serif text-2xl text-forest font-medium group-hover:text-gold-dark transition-colors">Crown Growth & Scalp Oils</h3>
+                                    <p data-i18n="feat.card3.desc" class="text-sm text-charcoal/75 mt-3 leading-relaxed">
+                                        Targeted hair oils and moisture-sealing elixirs crafted to soothe braided scalps, nourish edges, and impart a luminous, non-greasy sheen.
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="px-8 pb-7 pt-4 border-t border-gold/20 flex items-center justify-between gap-2">
+                                <span data-i18n="common.catalogPlaceholder" class="placeholder-tag">Catalog Details To Be Added</span>
+                                <button onclick="navigateTo('boutique')" class="text-xs uppercase tracking-[0.18em] font-semibold text-forest hover:text-gold-dark flex items-center gap-1.5 active:scale-[0.985]">
+                                    <span data-i18n="common.shopNow">Shop Now</span>
+                                    <span class="arrow-glide">
+                                        <svg class="arrow-first" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
+                                        <svg class="arrow-second" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
+                                    </span>
+                                </button>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+            <!-- CROWN HEALTH, BEAUTY & PROTECTION SECTION -->
+            <div class="py-20 md:py-28 bg-forest text-ivory relative overflow-hidden">
+                <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                    <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+                        <div class="lg:col-span-5 reveal-on-scroll">
+                            <div class="editorial-img-wrap rounded-[2px] border border-gold/40">
+                                <img 
+                                    src="https://images.unsplash.com/photo-1589156280159-27698a70f29e?auto=format&fit=crop&w=900&q=85" 
+                                    alt="Close-up portrait of a Black woman with healthy edges and braided crown" 
+                                    class="w-full h-[480px] object-cover object-top hover:scale-[1.04] transition-transform duration-1000"
+                                    onerror="this.src='https://placehold.co/700x800/183D2D/C5A059?text=Crown+Care+Ritual'"
+                                >
+                            </div>
+                        </div>
+                        <div class="lg:col-span-7 space-y-8 reveal-on-scroll" style="--reveal-delay: 90ms;">
+                            <span data-i18n="care.tag" class="text-xs uppercase tracking-[0.25em] text-gold-light font-medium">The Protect Your Crown Standard</span>
+                            <h2 data-i18n="care.title" class="font-serif text-3xl sm:text-5xl text-ivory leading-tight">
+                                Beauty, Scalp Health & Length Retention in Every Part
+                            </h2>
+                            <p data-i18n="care.intro" class="text-ivory/80 font-light leading-relaxed">
+                                True protective styling should leave your natural hair stronger at takedown than on installation day. Our methodology centers on three non-negotiable commitments to Afro-textured hair:
+                            </p>
+
+                            <div class="space-y-4 pt-2">
+                                <div class="flex items-start gap-5 p-5 rounded-[2px] bg-forest-light/70 border border-gold/25 hover:border-gold transition-colors duration-500">
+                                    <div class="w-10 h-10 rounded-[2px] bg-gold/15 border border-gold/40 flex items-center justify-center shrink-0 text-gold-light font-serif text-xl">01</div>
+                                    <div>
+                                        <h3 data-i18n="care.p1.title" class="font-serif text-xl text-gold-light">Edge-Safe, Tension-Conscious Braiding</h3>
+                                        <p data-i18n="care.p1.desc" class="text-sm text-ivory/75 mt-1">Balanced knotless feeding and clean parting that respects delicate edges, temples, and scalp comfort from day one.</p>
+                                    </div>
+                                </div>
+                                <div class="flex items-start gap-5 p-5 rounded-[2px] bg-forest-light/70 border border-gold/25 hover:border-gold transition-colors duration-500">
+                                    <div class="w-10 h-10 rounded-[2px] bg-gold/15 border border-gold/40 flex items-center justify-center shrink-0 text-gold-light font-serif text-xl">02</div>
+                                    <div>
+                                        <h3 data-i18n="care.p2.title" class="font-serif text-xl text-gold-light">Botanical Oil Infusion & Moisture Sealing</h3>
+                                        <p data-i18n="care.p2.desc" class="text-sm text-ivory/75 mt-1">Precision application of nourishing hair oils to keep your scalp hydrated and your natural strands supple underneath braids or twists.</p>
+                                    </div>
+                                </div>
+                                <div class="flex items-start gap-5 p-5 rounded-[2px] bg-forest-light/70 border border-gold/25 hover:border-gold transition-colors duration-500">
+                                    <div class="w-10 h-10 rounded-[2px] bg-gold/15 border border-gold/40 flex items-center justify-center shrink-0 text-gold-light font-serif text-xl">03</div>
+                                    <div>
+                                        <h3 data-i18n="care.p3.title" class="font-serif text-xl text-gold-light">Prep, Maintenance & Safe Takedown</h3>
+                                        <p data-i18n="care.p3.desc" class="text-sm text-ivory/75 mt-1">Dedicated guidance and detangling care to prevent breakage, preserve density, and celebrate your natural curl pattern.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- AFRO CROWN GALLERY (Stagger 90ms) -->
+            <div class="py-20 md:py-24 bg-ivory">
+                <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                    <div class="text-center max-w-2xl mx-auto mb-14 reveal-on-scroll">
+                        <span data-i18n="gal.tag" class="text-xs uppercase tracking-[0.25em] text-gold-dark font-semibold">Editorial Lookbook</span>
+                        <h2 data-i18n="gal.title" class="font-serif text-3xl sm:text-5xl text-forest mt-2">Crown Artistry & Hair Inspiration</h2>
+                        <p data-i18n="gal.sub" class="text-sm text-charcoal/70 mt-3">
+                            A curated visual study of Protect Your Crown Beauty.Co: intricate braids, lush 4C natural textures, and golden botanical oil rituals.
+                        </p>
+                        <div class="mt-3">
+                            <span data-i18n="gal.placeholder" class="placeholder-tag">Official Salon Client Portfolio Photos To Be Integrated</span>
+                        </div>
+                    </div>
+
+                    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+                        <div class="gallery-card group relative overflow-hidden aspect-[4/5] border gold-border hover:border-gold transition-colors duration-500 bg-forest reveal-on-scroll" style="--reveal-delay: 0ms;">
+                            <img src="https://images.unsplash.com/photo-1611432579699-484f7990b127?auto=format&fit=crop&w=700&q=85" alt="Black woman wearing waist-length Knotless Box Braids" class="w-full h-full object-cover object-top" onerror="this.src='https://placehold.co/600x750/0F291E/C5A059?text=Knotless+Braids'">
+                            <div class="absolute inset-0 bg-gradient-to-t from-forest-dark/90 via-forest-dark/15 to-transparent opacity-90 transition-opacity duration-500"></div>
+                            <div class="absolute bottom-5 left-5 right-5 transition-transform duration-500 group-hover:-translate-y-1">
+                                <span data-i18n="gal.item1.cat" class="text-[10px] uppercase tracking-[0.22em] text-gold-light block">01 · Protective Braiding</span>
+                                <p data-i18n="gal.item1.title" class="font-serif text-xl text-ivory mt-0.5">Waist-Length Knotless Braids</p>
+                            </div>
+                        </div>
+
+                        <div class="gallery-card group relative overflow-hidden aspect-[4/5] border gold-border hover:border-gold transition-colors duration-500 bg-forest reveal-on-scroll" style="--reveal-delay: 90ms;">
+                            <img src="https://images.unsplash.com/photo-1589156280159-27698a70f29e?auto=format&fit=crop&w=700&q=85" alt="African woman wearing Fulani Cornrows and protective braids" class="w-full h-full object-cover object-top" onerror="this.src='https://placehold.co/600x750/0F291E/C5A059?text=Fulani+Cornrows'">
+                            <div class="absolute inset-0 bg-gradient-to-t from-forest-dark/90 via-forest-dark/15 to-transparent opacity-90 transition-opacity duration-500"></div>
+                            <div class="absolute bottom-5 left-5 right-5 transition-transform duration-500 group-hover:-translate-y-1">
+                                <span data-i18n="gal.item2.cat" class="text-[10px] uppercase tracking-[0.22em] text-gold-light block">02 · Tribal & Cornrows</span>
+                                <p data-i18n="gal.item2.title" class="font-serif text-xl text-ivory mt-0.5">Fulani Braids & Stitch Parting</p>
+                            </div>
+                        </div>
+
+                        <div class="gallery-card group relative overflow-hidden aspect-[4/5] border gold-border hover:border-gold transition-colors duration-500 bg-forest reveal-on-scroll" style="--reveal-delay: 180ms;">
+                            <img src="https://images.unsplash.com/photo-1596815064285-45ed8a9c0463?auto=format&fit=crop&w=700&q=85" alt="Black woman with Boho Goddess Braids and curly tendrils" class="w-full h-full object-cover object-top" onerror="this.src='https://placehold.co/600x750/0F291E/C5A059?text=Boho+Goddess+Braids'">
+                            <div class="absolute inset-0 bg-gradient-to-t from-forest-dark/90 via-forest-dark/15 to-transparent opacity-90 transition-opacity duration-500"></div>
+                            <div class="absolute bottom-5 left-5 right-5 transition-transform duration-500 group-hover:-translate-y-1">
+                                <span data-i18n="gal.item3.cat" class="text-[10px] uppercase tracking-[0.22em] text-gold-light block">03 · Bohemian Artistry</span>
+                                <p data-i18n="gal.item3.title" class="font-serif text-xl text-ivory mt-0.5">Goddess & Boho Curls</p>
+                            </div>
+                        </div>
+
+                        <div class="gallery-card group relative overflow-hidden aspect-[4/5] border gold-border hover:border-gold transition-colors duration-500 bg-forest reveal-on-scroll" style="--reveal-delay: 270ms;">
+                            <img src="https://images.unsplash.com/photo-1523824921871-d6f1a15151f1?auto=format&fit=crop&w=700&q=85" alt="Black woman with voluminous natural 4C Afro crown" class="w-full h-full object-cover object-top" onerror="this.src='https://placehold.co/600x750/0F291E/C5A059?text=4C+Natural+Afro'">
+                            <div class="absolute inset-0 bg-gradient-to-t from-forest-dark/90 via-forest-dark/15 to-transparent opacity-90 transition-opacity duration-500"></div>
+                            <div class="absolute bottom-5 left-5 right-5 transition-transform duration-500 group-hover:-translate-y-1">
+                                <span data-i18n="gal.item4.cat" class="text-[10px] uppercase tracking-[0.22em] text-gold-light block">04 · Natural 4C Crown</span>
+                                <p data-i18n="gal.item4.title" class="font-serif text-xl text-ivory mt-0.5">4C Coils, Shrinkage Care & Shine</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- CLIENT TESTIMONIALS (ZERO FABRICATED REVIEWS) -->
+            <div class="py-16 bg-ivory-warm border-t gold-border">
+                <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+                    <div class="bg-ivory rounded-[2px] p-8 sm:p-12 border gold-border text-center space-y-5 reveal-on-scroll">
+                        <span data-i18n="testi.tag" class="text-xs uppercase tracking-[0.25em] text-gold-dark font-semibold">Trust & Authenticity</span>
+                        <h2 data-i18n="testi.title" class="font-serif text-3xl text-forest">Client Testimonials</h2>
+                        <p data-i18n="testi.desc" class="text-sm text-charcoal/75 max-w-xl mx-auto leading-relaxed">
+                            In accordance with the integrity standards of Protect Your Crown Beauty.Co, we exclusively publish verified reviews shared by our real salon and apothecary clients.
+                        </p>
+                        <div class="pt-2">
+                            <span data-i18n="testi.placeholder" class="placeholder-tag">Section Reserved for Verified Client Testimonials</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- FINAL CALL TO ACTION -->
+            <div class="py-20 bg-ivory">
+                <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+                    <div class="bg-forest p-10 sm:p-16 text-center text-ivory border border-gold/40 relative overflow-hidden reveal-on-scroll">
+                        <div class="max-w-2xl mx-auto space-y-6 relative z-10">
+                            <span data-i18n="cta.tag" class="text-xs uppercase tracking-[0.25em] text-gold-light">Honor Your Natural Crown</span>
+                            <h2 data-i18n="cta.title" class="font-serif text-3xl sm:text-5xl text-ivory leading-tight">
+                                Reserve Your Braiding Session or Explore Our Hair Oils
+                            </h2>
+                            <p data-i18n="cta.desc" class="text-ivory/80 text-sm sm:text-base font-light">
+                                Whether you are booking protective knotless braids, a restorative moisture treatment, or ordering our botanical hair oils, we are here to care for your crown.
+                            </p>
+                            <div class="flex flex-col sm:flex-row justify-center gap-4 pt-4">
+                                <button onclick="openBookingModal()" class="btn-editorial-gold px-8 py-4">
+                                    <span data-i18n="nav.book">Book Appointment</span>
+                                    <span class="arrow-glide">
+                                        <svg class="arrow-first" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
+                                        <svg class="arrow-second" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
+                                    </span>
+                                </button>
+                                <button onclick="navigateTo('boutique')" class="btn-editorial-outline text-ivory px-8 py-4">
+                                    <span data-i18n="cta.shopBtn">Visit The Shop</span>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </section>
+
+        <!-- ==========================================
+             2. SERVICES PAGE (PRESTATIONS)
+             ========================================== -->
+        <section id="page-prestations" class="page-section">
+            
+            <div class="bg-forest text-ivory py-16 md:py-20 border-b border-gold/30">
+                <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center space-y-4">
+                    <span data-i18n="srvPage.tag" class="text-xs uppercase tracking-[0.25em] text-gold-light">Service Menu</span>
+                    <h1 data-i18n="srvPage.title" class="font-serif text-4xl sm:text-6xl font-normal">Braiding & Crown Care Services</h1>
+                    <p data-i18n="srvPage.sub" class="text-ivory/80 max-w-2xl mx-auto text-sm sm:text-base font-light">
+                        Luxury Afro braiding, protective styling, and deep natural hair treatments. Exact durations and pricing are confirmed upon consultation or to be completed with the salon’s official rate card.
+                    </p>
+                </div>
+            </div>
+
+            <div class="py-14 bg-ivory">
+                <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                    
+                    <!-- Editorial Tabs with Sliding Indicator -->
+                    <div class="flex justify-center mb-14 overflow-x-auto">
+                        <div id="service-tabs-nav" class="editorial-tabs-nav" role="tablist" aria-label="Service Categories">
+                            <button onclick="filterServices('all')" data-service-filter="all" class="service-filter-btn editorial-tab is-active">
+                                <sup>01</sup><span data-i18n="srvPage.tab.all">All Services</span>
+                            </button>
+                            <button onclick="filterServices('tressage')" data-service-filter="tressage" class="service-filter-btn editorial-tab">
+                                <sup>02</sup><span data-i18n="srvPage.tab.braids">Braiding & Protective Styles</span>
+                            </button>
+                            <button onclick="filterServices('soins')" data-service-filter="soins" class="service-filter-btn editorial-tab">
+                                <sup>03</sup><span data-i18n="srvPage.tab.treatments">Natural Hair Treatments</span>
+                            </button>
+                            <button onclick="filterServices('entretien')" data-service-filter="entretien" class="service-filter-btn editorial-tab">
+                                <sup>04</sup><span data-i18n="srvPage.tab.maintenance">Maintenance & Crown Prep</span>
+                            </button>
+                            <span id="service-tab-indicator" class="tab-sliding-indicator"></span>
+                        </div>
+                    </div>
+
+                    <!-- Dynamic Services Grid -->
+                    <div id="services-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"></div>
+
+                    <!-- Consultation Note -->
+                    <div class="mt-16 bg-ivory-warm p-8 sm:p-10 border gold-border flex flex-col md:flex-row items-center justify-between gap-6">
+                        <div class="space-y-2">
+                            <h3 data-i18n="srvPage.note.title" class="font-serif text-2xl text-forest">Bespoke Crown Consultation & Transparent Quotes</h3>
+                            <p data-i18n="srvPage.note.desc" class="text-sm text-charcoal/75 max-w-2xl">
+                                Every crown is unique in density, curl pattern, and desired braid length/size. Final session duration and pricing are confirmed prior to your appointment—no arbitrary rates are displayed.
+                            </p>
+                        </div>
+                        <button onclick="openBookingModal()" class="shrink-0 btn-editorial-primary px-7 py-4">
+                            <span data-i18n="srvPage.note.btn">Request A Consultation</span>
+                            <span class="arrow-glide text-gold-light">
+                                <svg class="arrow-first" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
+                                <svg class="arrow-second" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
+                            </span>
+                        </button>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- ==========================================
+             3. SHOP PAGE (BOUTIQUE)
+             ========================================== -->
+        <section id="page-boutique" class="page-section">
+            
+            <div class="bg-forest text-ivory py-16 md:py-20 border-b border-gold/30">
+                <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center space-y-4">
+                    <span data-i18n="shopPage.tag" class="text-xs uppercase tracking-[0.25em] text-gold-light">Crown Apothecary</span>
+                    <h1 data-i18n="shopPage.title" class="font-serif text-4xl sm:text-6xl font-normal">The Shop — Hair Oils & Care</h1>
+                    <p data-i18n="shopPage.sub" class="text-ivory/80 max-w-2xl mx-auto text-sm sm:text-base font-light">
+                        Discover the official space dedicated to Protect Your Crown Beauty.Co botanical hair oils, scalp elixirs, and textured hair care rituals.
+                    </p>
+                </div>
+            </div>
+
+            <div class="py-12 bg-ivory">
+                <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                    
+                    <div class="mb-10 p-5 bg-ivory-warm border-l-2 border-gold flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
+                        <p data-i18n="shopPage.notice" class="text-xs sm:text-sm text-charcoal/80">
+                            <strong>Catalog Transparency:</strong> Product cards below present the official apothecary structure without inventing unconfirmed prices, bottle sizes, or ingredient lists. You can add items to your bag and submit an order inquiry.
+                        </p>
+                    </div>
+
+                    <!-- Editorial Shop Tabs -->
+                    <div class="flex flex-wrap items-center justify-between gap-4 mb-12">
+                        <div id="product-tabs-nav" class="editorial-tabs-nav" role="tablist" aria-label="Shop Categories">
+                            <button onclick="filterProducts('all')" data-product-filter="all" class="product-filter-btn editorial-tab is-active">
+                                <sup>01</sup><span data-i18n="shopPage.tab.all">All Products</span>
+                            </button>
+                            <button onclick="filterProducts('huiles')" data-product-filter="huiles" class="product-filter-btn editorial-tab">
+                                <sup>02</sup><span data-i18n="shopPage.tab.oils">Hair & Scalp Oils</span>
+                            </button>
+                            <button onclick="filterProducts('soins')" data-product-filter="soins" class="product-filter-btn editorial-tab">
+                                <sup>03</sup><span data-i18n="shopPage.tab.care">Crown Care & Rituals</span>
+                            </button>
+                            <span id="product-tab-indicator" class="tab-sliding-indicator"></span>
+                        </div>
+                    </div>
+
+                    <!-- Dynamic Products Grid -->
+                    <div id="products-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"></div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- ==========================================
+             4. ABOUT PAGE (À PROPOS)
+             ========================================== -->
+        <section id="page-apropos" class="page-section">
+            
+            <div class="bg-forest text-ivory py-16 md:py-20 border-b border-gold/30">
+                <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center space-y-4">
+                    <span data-i18n="aboutPage.tag" class="text-xs uppercase tracking-[0.25em] text-gold-light">The Spirit of the House</span>
+                    <h1 data-i18n="aboutPage.title" class="font-serif text-4xl sm:text-6xl font-normal">About Protect Your Crown Beauty.Co</h1>
+                    <p data-i18n="aboutPage.sub" class="text-ivory/80 max-w-2xl mx-auto text-sm sm:text-base font-light">
+                        An intentional, nurturing, and high-fashion vision of Afro hair artistry and botanical care.
+                    </p>
+                </div>
+            </div>
+
+            <div class="py-20 bg-ivory">
+                <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 space-y-20">
+                    
+                    <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+                        <div class="lg:col-span-6 space-y-6 reveal-on-scroll">
+                            <span data-i18n="aboutPage.story.tag" class="text-xs uppercase tracking-[0.25em] text-gold-dark font-semibold">Our Identity</span>
+                            <h2 data-i18n="aboutPage.story.title" class="font-serif text-3xl sm:text-4xl text-forest leading-tight">
+                                Honoring Every Textured Crown as Royalty
+                            </h2>
+                            <p data-i18n="aboutPage.story.p1" class="text-charcoal/80 leading-relaxed font-light">
+                                Protect Your Crown Beauty.Co was born from a clear conviction: the artistry of Black hairstyling—through braids, twists, and protective styles—is inseparable from consistent, loving nourishment of the scalp and natural hair fiber.
+                            </p>
+                            <p data-i18n="aboutPage.story.p2" class="text-charcoal/80 leading-relaxed font-light">
+                                Rather than choosing between stunning protective styles and long-term hair health, our house brings together master braiding, deep hydration rituals, and botanical hair oils under one roof.
+                            </p>
+                            <div class="p-5 rounded-[2px] bg-ivory-warm border gold-border space-y-2">
+                                <span data-i18n="aboutPage.bioPlaceholder" class="placeholder-tag">Founder Story / Official Brand Biography To Be Completed</span>
+                                <p data-i18n="aboutPage.bioNote" class="text-xs text-charcoal/70">
+                                    This editorial space is reserved for the founder’s authentic story and milestones, ensuring no personal biography is fabricated.
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="lg:col-span-6 reveal-on-scroll" style="--reveal-delay: 90ms;">
+                            <div class="relative rounded-[2px] overflow-hidden border gold-border aspect-[4/3] bg-forest editorial-img-wrap">
+                                <img 
+                                    src="https://images.unsplash.com/photo-1611432579699-484f7990b127?auto=format&fit=crop&w=1000&q=85" 
+                                    alt="Black African woman wearing protective braids by Protect Your Crown Beauty.Co" 
+                                    class="w-full h-full object-cover object-top"
+                                    onerror="this.src='https://placehold.co/800x600/0F291E/C5A059?text=Protect+Your+Crown+Beauty.Co'"
+                                >
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 3 Core Values -->
+                    <div class="pt-8 border-t gold-border">
+                        <div class="text-center max-w-2xl mx-auto mb-12 reveal-on-scroll">
+                            <span data-i18n="aboutPage.val.tag" class="text-xs uppercase tracking-[0.25em] text-gold-dark font-semibold">Our Pillars</span>
+                            <h2 data-i18n="aboutPage.val.title" class="font-serif text-3xl sm:text-4xl text-forest mt-2">Our Values & Approach</h2>
+                        </div>
+
+                        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                            <div class="editorial-card p-8 space-y-3 reveal-on-scroll" style="--reveal-delay: 0ms;">
+                                <span class="font-serif text-3xl text-gold-dark">I.</span>
+                                <h3 data-i18n="aboutPage.val1.title" class="font-serif text-2xl text-forest">Protection & Gentleness</h3>
+                                <p data-i18n="aboutPage.val1.desc" class="text-sm text-charcoal/75 leading-relaxed">
+                                    Every braid install and treatment is engineered to safeguard the integrity of your natural curls, promote length retention, and respect your edges.
+                                </p>
+                            </div>
+                            <div class="editorial-card p-8 space-y-3 reveal-on-scroll" style="--reveal-delay: 90ms;">
+                                <span class="font-serif text-3xl text-gold-dark">II.</span>
+                                <h3 data-i18n="aboutPage.val2.title" class="font-serif text-2xl text-forest">Craftsmanship & Precision</h3>
+                                <p data-i18n="aboutPage.val2.desc" class="text-sm text-charcoal/75 leading-relaxed">
+                                    From crisp geometric parting to the formulation of our hair oils, we prioritize meticulous execution, active listening, and serene hospitality.
+                                </p>
+                            </div>
+                            <div class="editorial-card p-8 space-y-3 reveal-on-scroll" style="--reveal-delay: 180ms;">
+                                <span class="font-serif text-3xl text-gold-dark">III.</span>
+                                <h3 data-i18n="aboutPage.val3.title" class="font-serif text-2xl text-forest">Timeless Crown Beauty</h3>
+                                <p data-i18n="aboutPage.val3.desc" class="text-sm text-charcoal/75 leading-relaxed">
+                                    Celebrating the natural richness of Afro-textured hair through an elevated, understated, and enduring luxury aesthetic.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- ==========================================
+             5. CONTACT PAGE
+             ========================================== -->
+        <section id="page-contact" class="page-section">
+            
+            <div class="bg-forest text-ivory py-16 md:py-20 border-b border-gold/30">
+                <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center space-y-4">
+                    <span data-i18n="contactPage.tag" class="text-xs uppercase tracking-[0.25em] text-gold-light">Get In Touch</span>
+                    <h1 data-i18n="contactPage.title" class="font-serif text-4xl sm:text-6xl font-normal">Contact & Practical Information</h1>
+                    <p data-i18n="contactPage.sub" class="text-ivory/80 max-w-2xl mx-auto text-sm sm:text-base font-light">
+                        Have a question about knotless braids, protective styling prep, or our hair oils? Send us a message below.
+                    </p>
+                </div>
+            </div>
+
+            <div class="py-16 md:py-24 bg-ivory">
+                <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                    <div class="grid grid-cols-1 lg:grid-cols-12 gap-12">
+                        
+                        <div class="lg:col-span-5 space-y-8 reveal-on-scroll">
+                            <div class="bg-ivory-warm p-8 rounded-[2px] border gold-border space-y-6">
+                                <div>
+                                    <span data-i18n="contactPage.info.tag" class="text-xs uppercase tracking-[0.2em] text-gold-dark font-semibold">Salon & Brand Details</span>
+                                    <h2 class="font-serif text-3xl text-forest mt-1">Protect Your Crown Beauty.Co</h2>
+                                </div>
+
+                                <div class="space-y-5 text-sm">
+                                    <div class="border-b border-gold/20 pb-4">
+                                        <p data-i18n="contactPage.info.loc" class="text-xs uppercase tracking-widest text-charcoal/60 mb-1">Studio Location / City</p>
+                                        <span data-i18n="contactPage.ph.loc" class="placeholder-tag">[Studio Address or Service Area To Be Completed]</span>
+                                    </div>
+
+                                    <div class="border-b border-gold/20 pb-4">
+                                        <p data-i18n="contactPage.info.email" class="text-xs uppercase tracking-widest text-charcoal/60 mb-1">Official Email</p>
+                                        <span data-i18n="contactPage.ph.email" class="placeholder-tag">[Official Contact Email To Be Completed]</span>
+                                    </div>
+
+                                    <div class="border-b border-gold/20 pb-4">
+                                        <p data-i18n="contactPage.info.phone" class="text-xs uppercase tracking-widest text-charcoal/60 mb-1">Phone / Text</p>
+                                        <span data-i18n="contactPage.ph.phone" class="placeholder-tag">[Phone Number To Be Completed]</span>
+                                    </div>
+
+                                    <div class="border-b border-gold/20 pb-4">
+                                        <p data-i18n="contactPage.info.hours" class="text-xs uppercase tracking-widest text-charcoal/60 mb-1">Salon Hours</p>
+                                        <span data-i18n="contactPage.ph.hours" class="placeholder-tag">[Appointment Days & Hours To Be Completed]</span>
+                                    </div>
+
+                                    <div>
+                                        <p data-i18n="contactPage.info.social" class="text-xs uppercase tracking-widest text-charcoal/60 mb-2">Official Social Channels</p>
+                                        <div class="flex flex-wrap gap-2">
+                                            <span class="placeholder-tag">Instagram: [@handle_to_add]</span>
+                                            <span class="placeholder-tag">TikTok: [@handle_to_add]</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="lg:col-span-7 reveal-on-scroll" style="--reveal-delay: 90ms;">
+                            <div class="bg-white p-8 sm:p-12 rounded-[2px] border gold-border">
+                                <h2 data-i18n="contactPage.form.title" class="font-serif text-3xl text-forest mb-2">Send Us A Message</h2>
+                                <p data-i18n="contactPage.form.sub" class="text-sm text-charcoal/70 mb-8">
+                                    Fill out the fields below. Your details are strictly used to respond to your inquiry.
+                                </p>
+
+                                <form id="contact-form" onsubmit="handleContactSubmit(event)" class="space-y-7" novalidate>
+                                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-8">
+                                        <div class="editorial-field">
+                                            <label for="contact-name" data-i18n="form.name" class="block text-[11px] uppercase tracking-[0.18em] text-forest font-medium mb-1">Full Name *</label>
+                                            <input type="text" id="contact-name" required placeholder="Your full name" class="editorial-input">
+                                        </div>
+                                        <div class="editorial-field">
+                                            <label for="contact-email" data-i18n="form.email" class="block text-[11px] uppercase tracking-[0.18em] text-forest font-medium mb-1">Email Address *</label>
+                                            <input type="email" id="contact-email" required placeholder="you@example.com" class="editorial-input">
+                                        </div>
+                                    </div>
+
+                                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-8">
+                                        <div class="editorial-field">
+                                            <label for="contact-phone" data-i18n="form.phoneOpt" class="block text-[11px] uppercase tracking-[0.18em] text-forest font-medium mb-1">Phone Number (optional)</label>
+                                            <input type="tel" id="contact-phone" placeholder="(555) 000-0000" class="editorial-input">
+                                        </div>
+                                        <div class="editorial-field">
+                                            <label for="contact-subject" data-i18n="form.subject" class="block text-[11px] uppercase tracking-[0.18em] text-forest font-medium mb-1">Inquiry Topic *</label>
+                                            <select id="contact-subject" required class="editorial-input">
+                                                <option value="" data-i18n="form.subject.select">Select a topic</option>
+                                                <option value="Braiding & Protective Styling" data-i18n="form.subject.opt1">Braiding & Protective Styling</option>
+                                                <option value="Natural Hair Care & Treatments" data-i18n="form.subject.opt2">Natural Hair Care & Treatments</option>
+                                                <option value="Hair Oils & Apothecary Shop" data-i18n="form.subject.opt3">Hair Oils & Apothecary Shop</option>
+                                                <option value="General Inquiry" data-i18n="form.subject.opt4">General Inquiry</option>
+                                            </select>
+                                        </div>
+                                    </div>
+
+                                    <div class="editorial-field">
+                                        <label for="contact-message" data-i18n="form.message" class="block text-[11px] uppercase tracking-[0.18em] text-forest font-medium mb-1">Your Message *</label>
+                                        <textarea id="contact-message" rows="4" required placeholder="Share your hair goals, desired style, or questions..." class="editorial-input"></textarea>
+                                    </div>
+
+                                    <div class="flex items-start gap-3 pt-1">
+                                        <input type="checkbox" id="contact-consent" required class="mt-1 accent-forest">
+                                        <label for="contact-consent" data-i18n="form.consent" class="text-xs text-charcoal/75 leading-relaxed">
+                                            I agree that my information may be processed by Protect Your Crown Beauty.Co solely to respond to my inquiry, in accordance with the privacy policy. *
+                                        </label>
+                                    </div>
+
+                                    <div id="contact-feedback" class="hidden p-4 rounded-[2px] text-sm"></div>
+
+                                    <button type="submit" class="w-full sm:w-auto btn-editorial-primary px-9 py-4">
+                                        <span data-i18n="form.send">Send Inquiry</span>
+                                        <span class="arrow-glide text-gold-light">
+                                            <svg class="arrow-first" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
+                                            <svg class="arrow-second" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
+                                        </span>
+                                    </button>
+                                </form>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ==========================================
+             6. LEGAL, TERMS & PRIVACY PAGE
+             ========================================== -->
+        <section id="page-mentions" class="page-section">
+            <div class="bg-forest text-ivory py-14 border-b border-gold/30">
+                <div class="max-w-4xl mx-auto px-4 text-center space-y-2">
+                    <span data-i18n="legal.tag" class="text-xs uppercase tracking-[0.25em] text-gold-light">Legal & Policies</span>
+                    <h1 data-i18n="legal.title" class="font-serif text-3xl sm:text-5xl">Terms of Service, Privacy & Legal Notice</h1>
+                </div>
+            </div>
+
+            <div class="py-16 bg-ivory">
+                <div class="max-w-4xl mx-auto px-4 sm:px-6 space-y-10">
+                    
+                    <div class="editorial-card p-8 space-y-4">
+                        <h2 data-i18n="legal.sec1.title" class="font-serif text-2xl text-forest">1. Company Information (To Be Completed)</h2>
+                        <p data-i18n="legal.sec1.desc" class="text-sm text-charcoal/80 leading-relaxed">
+                            Prior to public commercial launch, official business registration details must be completed below:
+                        </p>
+                        <ul class="space-y-2 text-sm">
+                            <li><strong>Brand Name:</strong> Protect Your Crown Beauty.Co</li>
+                            <li><strong>Legal Entity / LLC:</strong> <span class="placeholder-tag">[Legal Entity Structure To Be Completed]</span></li>
+                            <li><strong>Registered Address:</strong> <span class="placeholder-tag">[Registered Business Address To Be Completed]</span></li>
+                            <li><strong>Registration / Tax ID:</strong> <span class="placeholder-tag">[Official Registration Number To Be Completed]</span></li>
+                            <li><strong>Web Hosting Provider:</strong> <span class="placeholder-tag">[Hosting Provider Details To Be Completed]</span></li>
+                        </ul>
+                    </div>
+
+                    <div class="editorial-card p-8 space-y-4">
+                        <h2 data-i18n="legal.sec2.title" class="font-serif text-2xl text-forest">2. Salon Booking Policy & Shop Terms</h2>
+                        <div class="space-y-2 text-sm text-charcoal/80">
+                            <p data-i18n="legal.sec2.p1">• <strong>Pricing:</strong> All service rates and product prices will be displayed clearly in USD ($) or local currency once validated by the house.</p>
+                            <p>• <strong>Deposits, Shipping & Returns:</strong> <span class="placeholder-tag">[Deposit, Cancellation, Shipping & Return Policies To Be Completed]</span></p>
+                        </div>
+                    </div>
+
+                    <div class="editorial-card p-8 space-y-4">
+                        <h2 data-i18n="legal.sec3.title" class="font-serif text-2xl text-forest">3. Data Privacy & Cookie Preferences</h2>
+                        <p data-i18n="legal.sec3.desc" class="text-sm text-charcoal/80 leading-relaxed">
+                            Information submitted through our contact, appointment request, and order forms is used exclusively by Protect Your Crown Beauty.Co. You may request access, correction, or deletion of your personal data at any time.
+                        </p>
+                        <button onclick="openCookieBanner()" data-i18n="legal.cookieBtn" class="text-xs uppercase tracking-widest text-forest underline underline-offset-4 font-medium">
+                            Manage Cookie Preferences
+                        </button>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- ==========================================
+         FOOTER
+         ========================================== -->
+    <footer class="bg-forest-dark text-ivory border-t border-gold/30">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 mb-12">
+                
+                <div class="space-y-4">
+                    <div class="flex items-center gap-3">
+                        <div class="w-10 h-10 rounded-[2px] bg-forest flex items-center justify-center border border-gold/60">
+                            <svg class="w-5 h-5 text-gold" viewBox="0 0 64 64" fill="none">
+                                <path d="M12 44L18 22L27 33L32 16L37 33L46 22L52 44H12Z" stroke="currentColor" stroke-width="2.2" stroke-linejoin="round"/>
+                                <path d="M10 49H54" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"/>
+                            </svg>
+                        </div>
+                        <div>
+                            <span class="font-serif text-lg tracking-wider uppercase text-ivory block leading-none">Protect Your Crown</span>
+                            <span class="text-[9px] tracking-[0.25em] uppercase text-gold-light">Beauty.Co</span>
+                        </div>
+                    </div>
+                    <p data-i18n="footer.tagline" class="text-xs text-ivory/70 leading-relaxed">
+                        Luxury Afro hair braiding, protective styles, deep natural hair care, and botanical scalp & growth oils.
+                    </p>
+                </div>
+
+                <div>
+                    <h3 data-i18n="footer.nav" class="font-serif text-lg text-gold-light mb-4">Navigation</h3>
+                    <ul class="space-y-2.5 text-xs uppercase tracking-widest text-ivory/80">
+                        <li><button onclick="navigateTo('accueil')" data-i18n="nav.home" class="hover:text-gold-light transition">Home</button></li>
+                        <li><button onclick="navigateTo('prestations')" data-i18n="nav.services" class="hover:text-gold-light transition">Services</button></li>
+                        <li><button onclick="navigateTo('boutique')" data-i18n="nav.shop" class="hover:text-gold-light transition">Shop</button></li>
+                        <li><button onclick="navigateTo('apropos')" data-i18n="nav.about" class="hover:text-gold-light transition">About</button></li>
+                        <li><button onclick="navigateTo('contact')" data-i18n="nav.contact" class="hover:text-gold-light transition">Contact</button></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h3 data-i18n="footer.specialties" class="font-serif text-lg text-gold-light mb-4">Our Specialties</h3>
+                    <ul class="space-y-2.5 text-xs text-ivory/75">
+                        <li data-i18n="footer.spec1">Knotless Braids & Protective Styles</li>
+                        <li data-i18n="footer.spec2">Natural 3B–4C Moisture Treatments</li>
+                        <li data-i18n="footer.spec3">Scalp Care & Length Retention</li>
+                        <li data-i18n="footer.spec4">Botanical Hair & Edge Oils</li>
+                    </ul>
+                </div>
+
+                <div class="space-y-4">
+                    <h3 data-i18n="footer.bookTitle" class="font-serif text-lg text-gold-light mb-2">Appointments & Legal</h3>
+                    <button onclick="openBookingModal()" class="w-full btn-editorial-gold py-3.5 px-4">
+                        <span data-i18n="nav.book">Book Appointment</span>
+                        <span class="arrow-glide">
+                            <svg class="arrow-first" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
+                            <svg class="arrow-second" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
+                        </span>
+                    </button>
+                    <div class="pt-2 space-y-1.5 text-xs text-ivory/70">
+                        <button onclick="navigateTo('mentions')" data-i18n="footer.legalLink" class="block hover:text-gold-light underline underline-offset-4">Legal Notice & Terms</button>
+                        <button onclick="openCookieBanner()" data-i18n="footer.cookieLink" class="block hover:text-gold-light underline underline-offset-4">Cookie Preferences</button>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="pt-8 border-t border-gold/20 flex flex-col sm:flex-row items-center justify-between text-xs text-ivory/60 gap-4">
+                <p>© <span id="current-year">2026</span> Protect Your Crown Beauty.Co. <span data-i18n="footer.rights">All rights reserved.</span></p>
+                <p data-i18n="footer.integrity">Bespoke Editorial Art Direction — Zero Unverified Data Fabricated.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- ==========================================
+         APPOINTMENT REQUEST MODAL
+         ========================================== -->
+    <div id="booking-modal" class="fixed inset-0 z-50 hidden bg-forest-dark/75 backdrop-blur-sm flex items-center justify-center p-4 overflow-y-auto" role="dialog" aria-modal="true" aria-labelledby="booking-modal-title">
+        <div class="bg-ivory rounded-[2px] max-w-xl w-full border border-gold/50 overflow-hidden my-8">
+            <div class="bg-forest px-6 py-5 flex items-center justify-between border-b border-gold/30">
+                <div>
+                    <span data-i18n="modal.tag" class="text-[10px] uppercase tracking-[0.25em] text-gold-light block">Salon Concierge</span>
+                    <h3 id="booking-modal-title" data-i18n="modal.title" class="font-serif text-2xl text-ivory">Request An Appointment</h3>
+                </div>
+                <button onclick="closeBookingModal()" class="text-ivory/70 hover:text-gold-light p-2 active:scale-[0.985]" aria-label="Close">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M6 18L18 6M6 6l12 12"/></svg>
+                </button>
+            </div>
+
+            <form id="booking-form" onsubmit="handleBookingSubmit(event)" class="p-6 sm:p-8 space-y-6">
+                <div data-i18n="modal.notice" class="p-3.5 rounded-[2px] bg-ivory-warm border-l-2 border-gold text-xs text-charcoal/80">
+                    <strong>Transparent Booking:</strong> This module records your preferred appointment request. Final confirmation, session duration, and quote are sent by Protect Your Crown Beauty.Co upon review.
+                </div>
+
+                <div class="editorial-field">
+                    <label for="booking-service" data-i18n="modal.service" class="block text-[11px] uppercase tracking-[0.18em] text-forest font-medium mb-1">Requested Service *</label>
+                    <input type="text" id="booking-service" required class="editorial-input font-medium">
+                </div>
+
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                    <div class="editorial-field">
+                        <label for="booking-date" data-i18n="modal.date" class="block text-[11px] uppercase tracking-[0.18em] text-forest font-medium mb-1">Preferred Date *</label>
+                        <input type="date" id="booking-date" required class="editorial-input">
+                    </div>
+                    <div class="editorial-field">
+                        <label for="booking-slot" data-i18n="modal.time" class="block text-[11px] uppercase tracking-[0.18em] text-forest font-medium mb-1">Preferred Time *</label>
+                        <select id="booking-slot" required class="editorial-input">
+                            <option value="Morning" data-i18n="modal.time.morning">Morning</option>
+                            <option value="Afternoon" data-i18n="modal.time.afternoon">Afternoon</option>
+                            <option value="Evening" data-i18n="modal.time.evening">Late Afternoon / Evening</option>
+                            <option value="Flexible" data-i18n="modal.time.flex">Flexible</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                    <div class="editorial-field">
+                        <label for="booking-name" data-i18n="form.name" class="block text-[11px] uppercase tracking-[0.18em] text-forest font-medium mb-1">Full Name *</label>
+                        <input type="text" id="booking-name" required placeholder="Your name" class="editorial-input">
+                    </div>
+                    <div class="editorial-field">
+                        <label for="booking-contact" data-i18n="modal.contact" class="block text-[11px] uppercase tracking-[0.18em] text-forest font-medium mb-1">Email or Phone *</label>
+                        <input type="text" id="booking-contact" required placeholder="Best way to reach you" class="editorial-input">
+                    </div>
+                </div>
+
+                <div class="editorial-field">
+                    <label for="booking-notes" data-i18n="modal.notes" class="block text-[11px] uppercase tracking-[0.18em] text-forest font-medium mb-1">Hair Texture, Desired Length & Notes (optional)</label>
+                    <textarea id="booking-notes" rows="2" placeholder="e.g., Mid-back small knotless, 4C natural hair, scalp sensitivity..." class="editorial-input"></textarea>
+                </div>
+
+                <div id="booking-feedback" class="hidden p-4 rounded-[2px] text-sm"></div>
+
+                <div class="flex items-center justify-end gap-3 pt-2">
+                    <button type="button" onclick="closeBookingModal()" data-i18n="modal.cancel" class="px-5 py-3 text-xs uppercase tracking-widest text-charcoal/70 hover:text-forest active:scale-[0.985]">Cancel</button>
+                    <button type="submit" class="btn-editorial-primary px-7 py-3.5">
+                        <span data-i18n="modal.submit">Submit Request</span>
+                        <span class="arrow-glide text-gold-light">
+                            <svg class="arrow-first" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
+                            <svg class="arrow-second" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
+                        </span>
+                    </button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- ==========================================
+         SHOPPING BAG & ORDER INQUIRY DRAWER
+         ========================================== -->
+    <div id="cart-drawer" class="fixed inset-0 z-50 hidden">
+        <div onclick="toggleCartDrawer(false)" class="absolute inset-0 bg-forest-dark/70 backdrop-blur-sm"></div>
+        
+        <div class="absolute top-0 right-0 bottom-0 w-full max-w-md bg-ivory border-l border-gold/40 flex flex-col justify-between z-10">
+            <div class="p-6 bg-forest text-ivory flex items-center justify-between border-b border-gold/30">
+                <div>
+                    <span data-i18n="bag.tag" class="text-[10px] uppercase tracking-[0.25em] text-gold-light block">Protect Your Crown Apothecary</span>
+                    <h3 data-i18n="bag.title" class="font-serif text-2xl">Your Selection</h3>
+                </div>
+                <button onclick="toggleCartDrawer(false)" class="p-2 text-ivory/75 hover:text-gold-light active:scale-[0.985]" aria-label="Close Bag">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M6 18L18 6M6 6l12 12"/></svg>
+                </button>
+            </div>
+
+            <div class="flex-grow overflow-y-auto p-6 space-y-6">
+                <div id="cart-items-container" class="space-y-4"></div>
+
+                <form id="checkout-form" onsubmit="handleOrderSubmit(event)" class="hidden pt-4 border-t gold-border space-y-5">
+                    <h4 data-i18n="bag.form.title" class="font-serif text-xl text-forest">Complete Order Inquiry</h4>
+                    <p data-i18n="bag.form.desc" class="text-xs text-charcoal/75 leading-relaxed">
+                        No simulated online charge is triggered. Your product selection is sent to Protect Your Crown Beauty.Co, who will confirm availability, final total, and your secure payment link.
+                    </p>
+                    <div class="editorial-field">
+                        <label data-i18n="form.name" class="block text-[11px] uppercase tracking-[0.18em] text-forest mb-1">Full Name *</label>
+                        <input type="text" id="order-name" required class="editorial-input">
+                    </div>
+                    <div class="editorial-field">
+                        <label data-i18n="form.email" class="block text-[11px] uppercase tracking-[0.18em] text-forest mb-1">Email Address *</label>
+                        <input type="email" id="order-email" required class="editorial-input">
+                    </div>
+                    <div class="editorial-field">
+                        <label data-i18n="bag.form.phone" class="block text-[11px] uppercase tracking-[0.18em] text-forest mb-1">Phone Number *</label>
+                        <input type="tel" id="order-phone" required class="editorial-input">
+                    </div>
+                    <button type="submit" class="w-full btn-editorial-gold py-3.5">
+                        <span data-i18n="bag.form.submit">Send Order Inquiry</span>
+                        <span class="arrow-glide">
+                            <svg class="arrow-first" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
+                            <svg class="arrow-second" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
+                        </span>
+                    </button>
+                </form>
+
+                <div id="order-feedback" class="hidden p-4 rounded-[2px] bg-forest text-ivory border border-gold/40 text-sm"></div>
+            </div>
+
+            <div class="p-6 bg-ivory-warm border-t gold-border space-y-3">
+                <div class="flex items-center justify-between text-sm">
+                    <span data-i18n="bag.estTotal" class="uppercase tracking-widest text-xs text-charcoal/70">Estimated Total</span>
+                    <span data-i18n="bag.priceTag" class="placeholder-tag">Official Pricing To Be Confirmed</span>
+                </div>
+                <button id="proceed-checkout-btn" onclick="showCheckoutForm()" class="w-full btn-editorial-primary py-3.5">
+                    <span data-i18n="bag.proceed">Proceed To Order Inquiry</span>
+                    <span class="arrow-glide text-gold-light">
+                        <svg class="arrow-first" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
+                        <svg class="arrow-second" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
+                    </span>
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- ==========================================
+         COOKIE CONSENT BANNER
+         ========================================== -->
+    <div id="cookie-banner" class="fixed bottom-4 left-4 right-4 md:left-auto md:right-6 md:max-w-md z-40 bg-forest-dark text-ivory p-6 rounded-[2px] border border-gold/40 hidden">
+        <div class="space-y-3">
+            <span data-i18n="cookie.title" class="text-[10px] uppercase tracking-[0.2em] text-gold-light font-semibold block">Privacy & Cookie Preferences</span>
+            <p data-i18n="cookie.desc" class="text-xs text-ivory/80 leading-relaxed">
+                Protect Your Crown Beauty.Co uses strictly necessary technical cookies to operate your shopping bag and language preferences.
+            </p>
+            <div class="flex items-center gap-3 pt-2">
+                <button onclick="saveCookieChoice('accepted')" data-i18n="cookie.accept" class="flex-1 btn-editorial-gold py-2.5 px-4">
+                    Accept All
+                </button>
+                <button onclick="saveCookieChoice('essential')" data-i18n="cookie.essential" class="flex-1 btn-editorial-outline text-ivory py-2.5 px-4">
+                    Essential Only
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- TOAST NOTIFICATION -->
+    <div id="toast-notification" class="fixed top-28 right-6 z-50 hidden bg-forest text-ivory px-5 py-3.5 rounded-[2px] border border-gold flex items-center gap-3 max-w-sm">
+        <span class="w-2 h-2 bg-gold shrink-0"></span>
+        <p id="toast-message" class="text-xs tracking-wide"></p>
+    </div>
+
+    <!-- ==========================================
+         BILINGUAL APPLICATION LOGIC (EN-US DEFAULT / FR)
+         ========================================== -->
+    <script>
+        let currentLang = 'en'; // American English by default
+
+        /* ----------------------------------------------------------
+           1. BILINGUAL UI DICTIONARY (US English & French)
+           ---------------------------------------------------------- */
+        const I18N = {
+            en: {
+                'top.banner': 'Protect Your Crown Beauty.Co — Luxury African Hair Braiding, 4C Natural Crown Care & Botanical Oils',
+                'preview.visible': 'Preview Mode: Editorial Placeholders Visible',
+                'preview.hidden': 'Preview Mode: Clean Editorial View Active',
+                'nav.home': 'Home',
+                'nav.services': 'Services',
+                'nav.shop': 'Shop',
+                'nav.about': 'About',
+                'nav.contact': 'Contact',
+                'nav.book': 'Book Appointment',
+                'hero.badge': 'Black & African Hair Braiding Sanctuary',
+                'hero.subtitle': 'Your Afro-textured hair is royalty. We honor Black women’s 3C–4C coils, kinks, and curls through tension-free African braiding (Knotless, Fulani, Boho, Senegalese Twists & Locs), deep scalp rituals, and botanical growth oils.',
+                'hero.cta.services': 'Explore Braiding Styles',
+                'hero.cta.book': 'Book Appointment',
+                'hero.pillar1.title': 'African Braiding',
+                'hero.pillar1.desc': 'Knotless, Fulani, Stitch Cornrows & Boho',
+                'hero.pillar2.title': '4C Crown Care',
+                'hero.pillar2.desc': 'Deep steam hydration for 3C–4C coils',
+                'hero.pillar3.title': 'Growth Elixirs',
+                'hero.pillar3.desc': 'Edge saver, scalp & length retention oils',
+                'hero.quote': '“Elevating African protective braiding without ever compromising the health of your edges or 4C natural coils.”',
+                'stylesBar.tag': 'African Hair Heritage & Protective Styles',
+                'stylesBar.title': 'Specialists in Black & African Hairstyles',
+                'stylesBar.sub': 'Dedicated 100% to Black women’s kinky, coily, and textured hair (Types 3C, 4A, 4B & 4C) with authentic African braiding artistry.',
+                'stylesBar.s1': 'Knotless Braids',
+                'stylesBar.s2': 'Fulani & Stitch Cornrows',
+                'stylesBar.s3': 'Boho & Goddess Braids',
+                'stylesBar.s4': 'Senegalese & Passion Twists',
+                'stylesBar.s5': 'Butterfly & Soft Locs',
+                'stylesBar.s6': '4C Afro & Silk Press Care',
+                'phil.tag': 'Our Philosophy',
+                'phil.title': 'Where Regal African Braiding Meets Holistic 4C Crown Care',
+                'phil.body': 'At Protect Your Crown Beauty.Co, every Black woman’s crown is treated with reverence, precision, and gentle hands. Our house unites ancestral African braiding techniques, deep moisture protocols for kinky and coily hair, and rich botanical oils.',
+                'feat.tag': 'Artistry & Rituals',
+                'feat.title': 'Signature African Braids, 4C Care & Oils',
+                'feat.btn.services': 'View All Styles & Services',
+                'feat.btn.shop': 'Explore The Shop',
+                'feat.card1.badge': '01 · Salon Artistry',
+                'feat.card1.title': 'Knotless Braids, Fulani & Twists',
+                'feat.card1.desc': 'Flawlessly parted Smedium & Jumbo Knotless Braids, Fulani tribal cornrows, Boho curls, and Senegalese twists crafted with zero-tension technique to protect your edges.',
+                'feat.card2.badge': '02 · Treatment & Prep',
+                'feat.card2.title': '4C Afro Hair & Scalp Treatments',
+                'feat.card2.desc': 'Deep steam hydration, Chebe & botanical moisture masks, scalp detox rituals, and pre-braid blow-out stretching designed specifically for kinky and coily hair.',
+                'feat.card3.badge': '03 · Official Apothecary',
+                'feat.card3.title': 'Crown Growth & Scalp Oils',
+                'feat.card3.desc': 'Targeted hair oils and moisture-sealing elixirs crafted to soothe braided scalps, nourish delicate edges, and impart a luminous sheen.',
+                'common.quotePlaceholder': 'Price & Duration: Upon Consultation',
+                'common.catalogPlaceholder': 'Catalog Details To Be Added',
+                'common.discover': 'Discover',
+                'common.shopNow': 'Shop Now',
+                'care.tag': 'The Protect Your Crown Standard',
+                'care.title': 'Beauty, Scalp Health & Length Retention in Every Part',
+                'care.intro': 'True protective styling should leave your natural 4C hair stronger and fuller at takedown than on installation day. Our methodology centers on three non-negotiable commitments to Black hair:',
+                'care.p1.title': 'Edge-Safe, Pain-Free Knotless Technique',
+                'care.p1.desc': 'Balanced knotless feeding and crisp geometric parting that never pulls on delicate baby hairs, edges, or temples.',
+                'care.p2.title': 'Botanical Oil Infusion & Moisture Sealing (LOC/LCO)',
+                'care.p2.desc': 'Precision application of nourishing hair oils to keep your scalp hydrated and your natural coils supple underneath braids, locs, or twists.',
+                'care.p3.title': 'Crown Prep, Braid Refresh & Anti-Breakage Takedown',
+                'care.p3.desc': 'Complete wash, stretch, and detangling protocols to eliminate shed-hair knots, prevent breakage, and retain every inch of growth.',
+                'gal.tag': 'Editorial Lookbook',
+                'gal.title': 'Black & African Crown Artistry',
+                'gal.sub': 'A visual celebration of Protect Your Crown Beauty.Co: waist-length Knotless Braids, Fulani cornrows, Goddess curls, and healthy 4C natural crowns.',
+                'gal.placeholder': 'Official Salon Client Portfolio Photos To Be Integrated',
+                'gal.item1.cat': '01 · Protective Braiding',
+                'gal.item1.title': 'Waist-Length Knotless Braids',
+                'gal.item2.cat': '02 · Tribal & Cornrows',
+                'gal.item2.title': 'Fulani Braids & Stitch Parting',
+                'gal.item3.cat': '03 · Bohemian Artistry',
+                'gal.item3.title': 'Goddess & Boho Curls',
+                'gal.item4.cat': '04 · Natural 4C Crown',
+                'gal.item4.title': '4C Coils, Shrinkage Care & Shine',
+                'testi.tag': 'Trust & Authenticity',
+                'testi.title': 'Client Testimonials',
+                'testi.desc': 'In accordance with the integrity standards of Protect Your Crown Beauty.Co, we exclusively publish verified reviews shared by our real salon and apothecary clients.',
+                'testi.placeholder': 'Section Reserved for Verified Client Testimonials',
+                'cta.tag': 'Honor Your Natural Crown',
+                'cta.title': 'Reserve Your Braiding Session or Explore Our Hair Oils',
+                'cta.desc': 'Whether you are booking Knotless Braids, Fulani Cornrows, a 4C moisture treatment, or ordering our botanical hair oils, we are here to care for your crown.',
+                'cta.shopBtn': 'Visit The Shop',
+                'srvPage.tag': 'African Braiding & Care Menu',
+                'srvPage.title': 'Braiding Styles & Natural Crown Services',
+                'srvPage.sub': 'Luxury African hair braiding, protective styles, and deep 3C–4C natural hair treatments. Exact durations and pricing are confirmed upon consultation or to be completed with the salon’s official rate card.',
+                'srvPage.tab.all': 'All Styles & Care',
+                'srvPage.tab.braids': 'African Braids, Twists & Locs',
+                'srvPage.tab.treatments': '4C Natural Hair Treatments',
+                'srvPage.tab.maintenance': 'Prep, Silk Press & Takedown',
+                'srvPage.note.title': 'Bespoke Crown Consultation & Transparent Quotes',
+                'srvPage.note.desc': 'Every crown is unique in density, 4C texture, and desired braid length (Shoulder, Mid-Back, Waist, or Butt-Length). Final session duration and pricing are confirmed prior to your appointment.',
+                'srvPage.note.btn': 'Request A Consultation',
+                'shopPage.tag': 'Crown Apothecary',
+                'shopPage.title': 'The Shop — Hair Oils & 4C Care',
+                'shopPage.sub': 'Discover the official space dedicated to Protect Your Crown Beauty.Co botanical hair oils, edge elixirs, and Afro-textured hair care rituals.',
+                'shopPage.notice': '<strong>Catalog Transparency:</strong> Product cards below present the official apothecary structure without inventing unconfirmed prices, bottle sizes, or ingredient lists. You can add items to your bag and submit an order inquiry.',
+                'shopPage.tab.all': 'All Products',
+                'shopPage.tab.oils': 'Scalp, Edge & Growth Oils',
+                'shopPage.tab.care': '4C Moisture & Braid Care',
+                'aboutPage.tag': 'The Spirit of the House',
+                'aboutPage.title': 'About Protect Your Crown Beauty.Co',
+                'aboutPage.sub': 'An intentional, nurturing, and high-fashion vision of Black & African hair artistry and botanical care.',
+                'aboutPage.story.tag': 'Our Identity',
+                'aboutPage.story.title': 'Honoring Every Black Woman’s Crown as Royalty',
+                'aboutPage.story.p1': 'Protect Your Crown Beauty.Co was born from a clear conviction: the ancestral art of African hairstyling—Knotless braids, Fulani cornrows, Senegalese twists, and locs—is inseparable from consistent, loving nourishment of the scalp and natural 4C hair fiber.',
+                'aboutPage.story.p2': 'Rather than choosing between stunning protective styles and long-term hair health, our house brings together master African braiding, deep steam hydration, and botanical hair oils under one roof.',
+                'aboutPage.bioPlaceholder': 'Founder Story / Official Brand Biography To Be Completed',
+                'aboutPage.bioNote': 'This editorial space is reserved for the founder’s authentic story and milestones, ensuring no personal biography is fabricated.',
+                'aboutPage.val.tag': 'Our Pillars',
+                'aboutPage.val.title': 'Our Values & Approach',
+                'aboutPage.val1.title': 'Edge Protection & Gentleness',
+                'aboutPage.val1.desc': 'Every braid install and treatment is engineered to safeguard the integrity of your natural coils, promote length retention, and protect your edges.',
+                'aboutPage.val2.title': 'Master Parting & Precision',
+                'aboutPage.val2.desc': 'From crisp stitch parting to the formulation of our hair oils, we prioritize neat execution, active listening, and a serene luxury salon experience.',
+                'aboutPage.val3.title': 'Unapologetic Afro Beauty',
+                'aboutPage.val3.desc': 'Celebrating the richness and versatility of Black and African hair through an elevated, understated, and timeless luxury aesthetic.',
+                'contactPage.tag': 'Get In Touch',
+                'contactPage.title': 'Contact & Practical Information',
+                'contactPage.sub': 'Have a question about Knotless Braids, Fulani styles, protective styling prep, or our hair oils? Send us a message below.',
+                'contactPage.info.tag': 'Salon & Brand Details',
+                'contactPage.info.loc': 'Studio Location / City',
+                'contactPage.ph.loc': '[Studio Address or Service Area To Be Completed]',
+                'contactPage.info.email': 'Official Email',
+                'contactPage.ph.email': '[Official Contact Email To Be Completed]',
+                'contactPage.info.phone': 'Phone / Text',
+                'contactPage.ph.phone': '[Phone Number To Be Completed]',
+                'contactPage.info.hours': 'Salon Hours',
+                'contactPage.ph.hours': '[Appointment Days & Hours To Be Completed]',
+                'contactPage.info.social': 'Official Social Channels',
+                'contactPage.form.title': 'Send Us A Message',
+                'contactPage.form.sub': 'Fill out the fields below. Your details are strictly used to respond to your inquiry.',
+                'form.name': 'Full Name *',
+                'form.email': 'Email Address *',
+                'form.phoneOpt': 'Phone Number (optional)',
+                'form.subject': 'Inquiry Topic *',
+                'form.subject.select': 'Select a topic',
+                'form.subject.opt1': 'African Braiding & Protective Styling',
+                'form.subject.opt2': '4C Natural Hair Care & Treatments',
+                'form.subject.opt3': 'Hair Oils & Apothecary Shop',
+                'form.subject.opt4': 'General Inquiry',
+                'form.message': 'Your Message *',
+                'form.consent': 'I agree that my information may be processed by Protect Your Crown Beauty.Co solely to respond to my inquiry, in accordance with the privacy policy. *',
+                'form.send': 'Send Inquiry',
+                'legal.tag': 'Legal & Policies',
+                'legal.title': 'Terms of Service, Privacy & Legal Notice',
+                'legal.sec1.title': '1. Company Information (To Be Completed)',
+                'legal.sec1.desc': 'Prior to public commercial launch, official business registration details must be completed below:',
+                'legal.sec2.title': '2. Salon Booking Policy & Shop Terms',
+                'legal.sec2.p1': '• <strong>Pricing:</strong> All service rates and product prices will be displayed clearly in USD ($) or local currency once validated by the house.',
+                'legal.sec3.title': '3. Data Privacy & Cookie Preferences',
+                'legal.sec3.desc': 'Information submitted through our contact, appointment request, and order forms is used exclusively by Protect Your Crown Beauty.Co. You may request access, correction, or deletion of your personal data at any time.',
+                'legal.cookieBtn': 'Manage Cookie Preferences',
+                'footer.tagline': 'Luxury African hair braiding, protective styles, deep 4C natural hair care, and botanical scalp & growth oils.',
+                'footer.nav': 'Navigation',
+                'footer.specialties': 'Our Specialties',
+                'footer.spec1': 'Knotless, Boho & Fulani Braids',
+                'footer.spec2': 'Senegalese Twists & Soft Locs',
+                'footer.spec3': '4C Steam Hydration & Scalp Detox',
+                'footer.spec4': 'Botanical Hair & Edge Growth Oils',
+                'footer.bookTitle': 'Appointments & Legal',
+                'footer.legalLink': 'Legal Notice & Terms',
+                'footer.cookieLink': 'Cookie Preferences',
+                'footer.rights': 'All rights reserved.',
+                'footer.integrity': 'Bespoke Editorial Art Direction — Zero Unverified Data Fabricated.',
+                'modal.tag': 'Salon Concierge',
+                'modal.title': 'Request An Appointment',
+                'modal.notice': '<strong>Transparent Booking:</strong> This module records your preferred appointment request. Final confirmation, session duration, and quote are sent by Protect Your Crown Beauty.Co upon review.',
+                'modal.service': 'Requested Braid Style or Treatment *',
+                'modal.date': 'Preferred Date *',
+                'modal.time': 'Preferred Time *',
+                'modal.time.morning': 'Morning',
+                'modal.time.afternoon': 'Afternoon',
+                'modal.time.evening': 'Late Afternoon / Evening',
+                'modal.time.flex': 'Flexible',
+                'modal.contact': 'Email or Phone *',
+                'modal.notes': 'Hair Type (3C–4C), Braid Size (Small/Smedium/Medium) & Length (Mid-Back/Waist)',
+                'modal.cancel': 'Cancel',
+                'modal.submit': 'Submit Request',
+                'bag.tag': 'Protect Your Crown Apothecary',
+                'bag.title': 'Your Selection',
+                'bag.emptyTitle': 'Your bag is currently empty',
+                'bag.emptySub': 'Explore our botanical hair oils and crown care rituals to build your regimen.',
+                'bag.form.title': 'Complete Order Inquiry',
+                'bag.form.desc': 'No simulated online charge is triggered. Your product selection is sent to Protect Your Crown Beauty.Co, who will confirm availability, final total, and your secure payment link.',
+                'bag.form.phone': 'Phone Number *',
+                'bag.form.submit': 'Send Order Inquiry',
+                'bag.estTotal': 'Estimated Total',
+                'bag.priceTag': 'Official Pricing To Be Confirmed',
+                'bag.proceed': 'Proceed To Order Inquiry',
+                'cookie.title': 'Privacy & Cookie Preferences',
+                'cookie.desc': 'Protect Your Crown Beauty.Co uses strictly necessary technical cookies to operate your shopping bag and language preferences.',
+                'cookie.accept': 'Accept All',
+                'cookie.essential': 'Essential Only'
+            },
+            fr: {
+                'top.banner': 'Protect Your Crown Beauty.Co — Haute Coiffure Femme Noire & Africaine, Tresses & Huiles Capillaires',
+                'preview.visible': 'Mode Aperçu : Balises à compléter visibles',
+                'preview.hidden': 'Mode Aperçu : Rendu éditorial épuré activé',
+                'nav.home': 'Accueil',
+                'nav.services': 'Prestations',
+                'nav.shop': 'Boutique',
+                'nav.about': 'À propos',
+                'nav.contact': 'Contact',
+                'nav.book': 'Prendre rendez-vous',
+                'hero.badge': 'Maison de Coiffure Femme Noire & Africaine',
+                'hero.subtitle': 'Votre chevelure afro et crépue est une couronne royale. Nous sublimons les femmes noires et leurs cheveux 3C à 4C grâce au tressage africain sans tension (Knotless Braids, Fulani, Boho, Vanilles Sénégalaises & Locs), aux soins profonds et aux huiles de pousse.',
+                'hero.cta.services': 'Découvrir nos coiffures afro',
+                'hero.cta.book': 'Prendre rendez-vous',
+                'hero.pillar1.title': 'Tressage Africain',
+                'hero.pillar1.desc': 'Knotless, Fulani, Nattes collées & Boho',
+                'hero.pillar2.title': 'Soins Crépus 4C',
+                'hero.pillar2.desc': 'Hydratation vapeur intense des cheveux 3C–4C',
+                'hero.pillar3.title': 'Élixirs de Pousse',
+                'hero.pillar3.desc': 'Huiles baby hairs, cuir chevelu & longueur',
+                'hero.quote': '« Sublimer vos tresses africaines et coiffures protectrices sans jamais compromettre vos baby hairs ni vos cheveux crépus 4C. »',
+                'stylesBar.tag': 'Héritage Capillaire Africain & Coiffures Protectrices',
+                'stylesBar.title': 'Spécialiste des Coiffures Femmes Noires & Afro',
+                'stylesBar.sub': 'Dédié à 100 % aux cheveux crépus, frisés et texturés des femmes noires (Types 3C, 4A, 4B & 4C) avec un savoir-faire authentique du tressage africain.',
+                'stylesBar.s1': 'Knotless Braids',
+                'stylesBar.s2': 'Fulani & Stitch Cornrows',
+                'stylesBar.s3': 'Boho & Goddess Braids',
+                'stylesBar.s4': 'Vanilles Sénégalaises & Twists',
+                'stylesBar.s5': 'Butterfly & Soft Locs',
+                'stylesBar.s6': 'Afro 4C & Soin Silk Press',
+                'phil.tag': 'Notre Philosophie',
+                'phil.title': 'L’alliance du tressage africain royal et du soin profond des cheveux crépus 4C',
+                'phil.body': 'Chez Protect Your Crown Beauty.Co, la couronne de chaque femme noire est honorée avec douceur, précision et respect. Notre maison réunit l’art ancestral des tresses africaines, les rituels d’hydratation profonde pour cheveux crépus et la richesse des huiles botaniques.',
+                'feat.tag': 'Savoir-Faire & Rituels',
+                'feat.title': 'Tresses Africaines Signatures, Soins 4C & Huiles',
+                'feat.btn.services': 'Toutes les coiffures & soins',
+                'feat.btn.shop': 'Explorer la boutique',
+                'feat.card1.badge': '01 · Art du Salon',
+                'feat.card1.title': 'Knotless Braids, Fulani & Vanilles',
+                'feat.card1.desc': 'Réalisation minutieuse de Knotless Braids (Small, Smedium, Jumbo), tresses tribales Fulani, Boho Braids bouclées et Vanilles Sénégalaises sans aucune tension sur vos tempes.',
+                'feat.card2.badge': '02 · Soin & Préparation',
+                'feat.card2.title': 'Soins Cheveux Crépus 4C & Cuir Chevelu',
+                'feat.card2.desc': 'Bains de vapeur hydratants, masques au Chébé et beurres végétaux, détox du cuir chevelu et étirage doux avant tressage pensés pour les cheveux crépus.',
+                'feat.card3.badge': '03 · Apothicaire Officiel',
+                'feat.card3.title': 'Huiles de Pousse & Cuir Chevelu',
+                'feat.card3.desc': 'Huiles capillaires et élixirs scellants formulés pour apaiser le cuir chevelu sous les tresses, fortifier les tempes (edges) et faire briller vos nattes.',
+                'common.quotePlaceholder': 'Tarif & Durée : Sur consultation',
+                'common.catalogPlaceholder': 'Détails du catalogue à renseigner',
+                'common.discover': 'Découvrir',
+                'common.shopNow': 'Voir la boutique',
+                'care.tag': 'L’Exigence Protect Your Crown',
+                'care.title': 'Beauté, santé du cuir chevelu et rétention de longueur à chaque tracé',
+                'care.intro': 'Une véritable coiffure protectrice doit laisser vos cheveux crépus 4C plus forts et plus fournis à la dépose qu’au jour de la pose. Notre méthode repose sur trois engagements :',
+                'care.p1.title': 'Tressage Knotless sans douleur & protection des baby hairs',
+                'care.p1.desc': 'Une technique d’insertion progressive sans nœud et un tracé géométrique net qui ne tire jamais sur vos tempes ni vos contours fragiles.',
+                'care.p2.title': 'Infusion d’huiles botaniques & méthode LOC/LCO',
+                'care.p2.desc': 'L’application ciblée d’huiles capillaires pour nourrir le cuir chevelu et garder la fibre crépue souple sous vos tresses, locs ou vanilles.',
+                'care.p3.title': 'Préparation Crown Prep, retouche & dépose anti-casse',
+                'care.p3.desc': 'Un protocole complet de lavage, démêlage délicat et étirage pour éviter les nœuds, stopper la casse et conserver chaque centimètre de pousse.',
+                'gal.tag': 'Lookbook Éditorial',
+                'gal.title': 'Réalisations Coiffures Femmes Noires & Africaines',
+                'gal.sub': 'Célébration visuelle de Protect Your Crown Beauty.Co : Knotless Braids longues, Cornrows Fulani, Goddess Braids bouclées et couronnes afro 4C naturelles.',
+                'gal.placeholder': 'Photographies clientes officielles du salon à intégrer',
+                'gal.item1.cat': '01 · Tressage Protecteur',
+                'gal.item1.title': 'Knotless Braids Longueur Taille',
+                'gal.item2.cat': '02 · Art Tribal & Nattes',
+                'gal.item2.title': 'Tresses Fulani & Stitch Cornrows',
+                'gal.item3.cat': '03 · Esprit Bohème',
+                'gal.item3.title': 'Goddess & Boho Braids Bouclées',
+                'gal.item4.cat': '04 · Couronne Afro 4C',
+                'gal.item4.title': 'Cheveux Crépus 4C, Hydratation & Éclat',
+                'testi.tag': 'Confiance & Authenticité',
+                'testi.title': 'Témoignages Clientes',
+                'testi.desc': 'Conformément à l’éthique de Protect Your Crown Beauty.Co, nous publions exclusivement des avis authentiques et vérifiés transmis par nos clientes.',
+                'testi.placeholder': 'Section réservée aux témoignages clientes vérifiés',
+                'cta.tag': 'Sublimez Votre Couronne Afro',
+                'cta.title': 'Réservez votre séance de tressage ou découvrez nos huiles',
+                'cta.desc': 'Que vous souhaitiez réaliser des Knotless Braids, des nattes Fulani, un soin profond pour cheveux 4C ou commander nos huiles capillaires, notre maison est à votre écoute.',
+                'cta.shopBtn': 'Accéder à la boutique',
+                'srvPage.tag': 'Carte des Coiffures Afro & Soins',
+                'srvPage.title': 'Prestations de Tressage Africain & Soins 4C',
+                'srvPage.sub': 'Tressage africain haut de gamme, coiffures protectrices et soins profonds pour cheveux crépus 3C–4C. Les durées et tarifs exacts sont communiqués lors de votre demande ou à compléter selon la grille officielle.',
+                'srvPage.tab.all': 'Toutes les coiffures & soins',
+                'srvPage.tab.braids': 'Tresses Africaines, Vanilles & Locs',
+                'srvPage.tab.treatments': 'Soins Cheveux Crépus 4C',
+                'srvPage.tab.maintenance': 'Préparation, Silk Press & Dépose',
+                'srvPage.note.title': 'Diagnostic Personnalisé & Devis Transparent',
+                'srvPage.note.desc': 'Chaque chevelure afro étant unique par sa densité, sa texture 4C et la longueur de tresses choisie (Épaules, Milieu du dos, Taille), la durée et le tarif définitifs vous sont confirmés avant le rendez-vous.',
+                'srvPage.note.btn': 'Demander une consultation',
+                'shopPage.tag': 'Apothicaire Capillaire Afro',
+                'shopPage.title': 'La Boutique — Huiles de Pousse & Soins 4C',
+                'shopPage.sub': 'Découvrez l’espace dédié aux huiles capillaires botaniques, élixirs pour baby hairs/tempes et soins pour cheveux crépus Protect Your Crown Beauty.Co.',
+                'shopPage.notice': '<strong>Transparence Catalogue :</strong> Les fiches ci-dessous présentent la structure officielle de la boutique sans inventer de prix, de contenances ou d’ingrédients non confirmés. Vous pouvez ajouter des articles au panier et transmettre une pré-commande.',
+                'shopPage.tab.all': 'Tous les produits',
+                'shopPage.tab.oils': 'Huiles Pousse, Tempes & Cuir Chevelu',
+                'shopPage.tab.care': 'Soins Hydratants 4C & Entretien Tresses',
+                'aboutPage.tag': 'L’Esprit de la Maison',
+                'aboutPage.title': 'À propos de Protect Your Crown Beauty.Co',
+                'aboutPage.sub': 'Une vision exigeante, bienveillante et éditoriale de la coiffure pour femmes noires et africaines.',
+                'aboutPage.story.tag': 'Notre Identité',
+                'aboutPage.story.title': 'Honorer la couronne de chaque femme noire comme une royauté',
+                'aboutPage.story.p1': 'Protect Your Crown Beauty.Co est née d’une conviction forte : l’art ancestral de la coiffure africaine — Knotless braids, tresses Fulani, vanilles sénégalaises et locs — est indissociable d’un soin attentif et régulier du cuir chevelu et du cheveu crépu 4C.',
+                'aboutPage.story.p2': 'Plutôt que d’opposer coiffure protectrice et santé capillaire, notre maison réunit au sein d’un même écrin l’excellence du tressage africain, les bains de vapeur hydratants et les huiles botaniques.',
+                'aboutPage.bioPlaceholder': 'Histoire de la Fondatrice / Biographie Officielle à compléter',
+                'aboutPage.bioNote': 'Cet encadré est réservé au récit authentique de la fondatrice afin de ne fabriquer aucune histoire personnelle fictive.',
+                'aboutPage.val.tag': 'Nos Piliers',
+                'aboutPage.val.title': 'Nos Valeurs & Notre Approche',
+                'aboutPage.val1.title': 'Protection des Tempes & Douceur',
+                'aboutPage.val1.desc': 'Chaque pose de tresses et chaque soin est pensé pour préserver vos boucles naturelles, favoriser la rétention de longueur et protéger vos baby hairs.',
+                'aboutPage.val2.title': 'Tracés Nets & Précision',
+                'aboutPage.val2.desc': 'De la géométrie parfaite du tracé Stitch à la formulation de nos huiles capillaires, nous privilégions la finesse du geste et un accueil luxueux.',
+                'aboutPage.val3.title': 'Fierté & Beauté Afro Intemporelle',
+                'aboutPage.val3.desc': 'Célébrer la richesse et la polyvalence des cheveux noirs et africains à travers une direction artistique sobre, royale et durable.',
+                'contactPage.tag': 'Nous Écrire',
+                'contactPage.title': 'Contact & Informations Pratiques',
+                'contactPage.sub': 'Une question sur nos Knotless Braids, nos tresses Fulani, la préparation de vos cheveux crépus ou nos huiles ? Envoyez-nous votre message.',
+                'contactPage.info.tag': 'Coordonnées du Salon',
+                'contactPage.info.loc': 'Adresse du Studio / Ville',
+                'contactPage.ph.loc': '[Adresse postale ou secteur géographique à compléter]',
+                'contactPage.info.email': 'Courriel officiel',
+                'contactPage.ph.email': '[Email de contact officiel à compléter]',
+                'contactPage.info.phone': 'Téléphone / WhatsApp',
+                'contactPage.ph.phone': '[Numéro de téléphone à compléter]',
+                'contactPage.info.hours': 'Horaires d’accueil',
+                'contactPage.ph.hours': '[Jours et horaires sur rendez-vous à compléter]',
+                'contactPage.info.social': 'Réseaux Sociaux Officiels',
+                'contactPage.form.title': 'Envoyer un Message',
+                'contactPage.form.sub': 'Complétez les champs ci-dessous. Vos données sont utilisées uniquement pour répondre à votre demande.',
+                'form.name': 'Nom & Prénom *',
+                'form.email': 'Adresse e-mail *',
+                'form.phoneOpt': 'Téléphone (optionnel)',
+                'form.subject': 'Objet de la demande *',
+                'form.subject.select': 'Sélectionnez un sujet',
+                'form.subject.opt1': 'Tressage Africain & Coiffure Protectrice',
+                'form.subject.opt2': 'Soins Cheveux Crépus 4C',
+                'form.subject.opt3': 'Huiles Capillaires & Boutique',
+                'form.subject.opt4': 'Autre demande',
+                'form.message': 'Votre message *',
+                'form.consent': 'J’accepte que mes informations soient traitées par Protect Your Crown Beauty.Co afin de répondre à ma demande, conformément à la politique de confidentialité. *',
+                'form.send': 'Envoyer ma demande',
+                'legal.tag': 'Cadre Réglementaire',
+                'legal.title': 'Mentions Légales, CGV & Confidentialité',
+                'legal.sec1.title': '1. Éditeur du site (À compléter)',
+                'legal.sec1.desc': 'Avant la mise en ligne publique, les informations juridiques officielles de l’entreprise doivent être complétées :',
+                'legal.sec2.title': '2. Conditions de Réservation & Boutique (CGV)',
+                'legal.sec2.p1': '• <strong>Tarifs :</strong> Les prix des prestations et des produits seront affichés clairement dès leur validation officielle par la marque.',
+                'legal.sec3.title': '3. Protection des données & Cookies',
+                'legal.sec3.desc': 'Les informations transmises via les formulaires de contact, de rendez-vous et de commande sont strictement réservées à Protect Your Crown Beauty.Co.',
+                'legal.cookieBtn': 'Gérer mes préférences de cookies',
+                'footer.tagline': 'Haute coiffure femme noire et africaine, tressage protecteur, soins profonds 4C et huiles botaniques de pousse.',
+                'footer.nav': 'Navigation',
+                'footer.specialties': 'Nos Spécialités Afro',
+                'footer.spec1': 'Knotless, Boho & Fulani Braids',
+                'footer.spec2': 'Vanilles Sénégalaises & Soft Locs',
+                'footer.spec3': 'Hydratation Vapeur 4C & Détox',
+                'footer.spec4': 'Huiles de Pousse & Contours (Edges)',
+                'footer.bookTitle': 'Rendez-vous & Légal',
+                'footer.legalLink': 'Mentions légales & CGV',
+                'footer.cookieLink': 'Préférences de cookies',
+                'footer.rights': 'Tous droits réservés.',
+                'footer.integrity': 'Direction artistique éditoriale sur-mesure — Aucune donnée non vérifiée inventée.',
+                'modal.tag': 'Conciergerie Salon Afro',
+                'modal.title': 'Demande de Rendez-vous',
+                'modal.notice': '<strong>Réservation transparente :</strong> Ce module enregistre votre souhait de créneau. La confirmation définitive, la durée et le devis vous sont transmis par Protect Your Crown Beauty.Co après validation.',
+                'modal.service': 'Coiffure ou Soin souhaité *',
+                'modal.date': 'Date souhaitée *',
+                'modal.time': 'Préférence horaire *',
+                'modal.time.morning': 'Matinée',
+                'modal.time.afternoon': 'Après-midi',
+                'modal.time.evening': 'Fin de journée',
+                'modal.time.flex': 'Flexible',
+                'modal.contact': 'E-mail ou Téléphone *',
+                'modal.notes': 'Type de cheveux (3C–4C), Taille des tresses (Small/Smedium/Medium) & Longueur',
+                'modal.cancel': 'Annuler',
+                'modal.submit': 'Envoyer ma demande',
+                'bag.tag': 'Apothicaire Protect Your Crown',
+                'bag.title': 'Votre Sélection',
+                'bag.emptyTitle': 'Votre sélection est vide',
+                'bag.emptySub': 'Explorez nos huiles capillaires et nos soins pour composer votre rituel.',
+                'bag.form.title': 'Finaliser ma demande de commande',
+                'bag.form.desc': 'Aucun paiement en ligne fictif n’est déclenché. Votre sélection est transmise à Protect Your Crown Beauty.Co qui vous confirmera le montant et le lien de règlement sécurisé.',
+                'bag.form.phone': 'Téléphone *',
+                'bag.form.submit': 'Transmettre ma demande d’achat',
+                'bag.estTotal': 'Total estimatif',
+                'bag.priceTag': 'Tarifs officiels à confirmer',
+                'bag.proceed': 'Passer à la demande de commande',
+                'cookie.title': 'Confidentialité & Cookies',
+                'cookie.desc': 'Protect Your Crown Beauty.Co utilise uniquement des cookies techniques nécessaires au fonctionnement de votre sélection et de la langue d’affichage.',
+                'cookie.accept': 'Accepter',
+                'cookie.essential': 'Essentiels uniquement'
+            }
+        };
+
+        /* ----------------------------------------------------------
+           2. AUTHENTIC AFRICAN & BLACK WOMEN HAIR SERVICES DATA
+           ---------------------------------------------------------- */
+        const SERVICES_DATA = [
+            {
+                id: 'srv-1',
+                category: 'tressage',
+                image: 'https://images.unsplash.com/photo-1611432579699-484f7990b127?auto=format&fit=crop&w=800&q=85',
+                en: {
+                    categoryLabel: 'African Braiding & Protective Styles',
+                    title: 'Signature Knotless Box Braids (Small, Smedium, Medium, Jumbo)',
+                    description: 'Seamless, zero-tension knotless braids with razor-sharp geometric parting. Available in Bob, Mid-Back, Waist, or Butt-Length to protect your delicate edges and 4C crown.',
+                    durationPlaceholder: 'Duration: Varies by size & length',
+                    pricePlaceholder: 'Rate: To Be Completed',
+                    bookBtn: 'Book Knotless Braids'
+                },
+                fr: {
+                    categoryLabel: 'Tresses Africaines & Coiffures Protectrices',
+                    title: 'Knotless Box Braids Signatures (Small, Smedium, Medium, Jumbo)',
+                    description: 'Tresses sans nœuds ultra-plates et sans tension avec un tracé au peigne d’une netteté absolue. Disponibles en longueur Carré, Milieu du dos, Taille ou Longues.',
+                    durationPlaceholder: 'Durée : Selon taille & longueur',
+                    pricePlaceholder: 'Tarif : À compléter',
+                    bookBtn: 'Réserver mes Knotless'
+                }
+            },
+            {
+                id: 'srv-2',
+                category: 'tressage',
+                image: 'https://images.unsplash.com/photo-1596815064285-45ed8a9c0463?auto=format&fit=crop&w=800&q=85',
+                en: {
+                    categoryLabel: 'African Braiding & Protective Styles',
+                    title: 'French Curl, Goddess & Boho Knotless Braids',
+                    description: 'Luxury knotless braids infused with lush human-hair or premium curly tendrils throughout the lengths and ends for a soft, regal bohemian finish.',
+                    durationPlaceholder: 'Duration: Upon Consultation',
+                    pricePlaceholder: 'Rate: To Be Completed',
+                    bookBtn: 'Book Boho / Goddess Braids'
+                },
+                fr: {
+                    categoryLabel: 'Tresses Africaines & Coiffures Protectrices',
+                    title: 'French Curl, Goddess & Boho Knotless Braids',
+                    description: 'Tresses sans nœuds agrémentées de mèches bouclées soyeuses sur les longueurs et les pointes pour un volume aérien, féminin et royal.',
+                    durationPlaceholder: 'Durée : Sur consultation',
+                    pricePlaceholder: 'Tarif : À compléter',
+                    bookBtn: 'Réserver Boho / Goddess'
+                }
+            },
+            {
+                id: 'srv-3',
+                category: 'tressage',
+                image: 'https://images.unsplash.com/photo-1589156280159-27698a70f29e?auto=format&fit=crop&w=800&q=85',
+                en: {
+                    categoryLabel: 'African Braiding & Protective Styles',
+                    title: 'Fulani Tribal Braids, Stitch Cornrows & Lemonade Braids',
+                    description: 'Intricate African feed-in stitch cornrows, tribal Fulani patterns, and sleek crown designs optionally adorned with wooden or gold hair beads.',
+                    durationPlaceholder: 'Duration: Upon Consultation',
+                    pricePlaceholder: 'Rate: To Be Completed',
+                    bookBtn: 'Book Fulani / Cornrows'
+                },
+                fr: {
+                    categoryLabel: 'Tresses Africaines & Coiffures Protectrices',
+                    title: 'Tresses Fulani Tribales, Stitch Cornrows & Nattes Collées',
+                    description: 'Nattes collées africaines en technique Stitch ou Feed-in, motifs tribaux Fulani et coiffures couronnes avec pose optionnelle de perles et bijoux dorés.',
+                    durationPlaceholder: 'Durée : Sur consultation',
+                    pricePlaceholder: 'Tarif : À compléter',
+                    bookBtn: 'Réserver Fulani / Cornrows'
+                }
+            },
+            {
+                id: 'srv-4',
+                category: 'tressage',
+                image: 'https://images.unsplash.com/photo-1531123897727-8f129e1688ce?auto=format&fit=crop&w=800&q=85',
+                en: {
+                    categoryLabel: 'African Braiding & Protective Styles',
+                    title: 'Senegalese Twists, Marley Twists, Passion Twists & Soft Locs',
+                    description: 'Rope-twisted Senegalese twists, kinky Marley twists, spring twists, and distressed Butterfly/Soft Locs crafted for lightweight protection and versatility.',
+                    durationPlaceholder: 'Duration: Upon Consultation',
+                    pricePlaceholder: 'Rate: To Be Completed',
+                    bookBtn: 'Book Twists or Locs'
+                },
+                fr: {
+                    categoryLabel: 'Tresses Africaines & Coiffures Protectrices',
+                    title: 'Vanilles Sénégalaises, Marley Twists, Passion Twists & Soft Locs',
+                    description: 'Vanilles sénégalaises régulières, Kinky Marley twists, Passion twists et Butterfly/Soft Locs légères pour protéger durablement vos cheveux naturels.',
+                    durationPlaceholder: 'Durée : Sur consultation',
+                    pricePlaceholder: 'Tarif : À compléter',
+                    bookBtn: 'Réserver Vanilles ou Locs'
+                }
+            },
+            {
+                id: 'srv-5',
+                category: 'soins',
+                image: 'https://images.unsplash.com/photo-1523824921871-d6f1a15151f1?auto=format&fit=crop&w=800&q=85',
+                en: {
+                    categoryLabel: '4C Natural Hair Treatments',
+                    title: '4C Deep Steam Hydration, Chebe Mask & Twist-Out Ritual',
+                    description: 'Intensive moisture infusion under warm ozone mist with rich African botanical butters to soften 4A–4C coils, combat shrinkage breakage, and define two-strand twists.',
+                    durationPlaceholder: 'Duration: To Be Confirmed',
+                    pricePlaceholder: 'Rate: To Be Completed',
+                    bookBtn: 'Book 4C Hydration Ritual'
+                },
+                fr: {
+                    categoryLabel: 'Soins Cheveux Crépus 4C',
+                    title: 'Rituel Vapeur Intense 4C, Masque au Chébé & Twist-Out',
+                    description: 'Bain de vapeur profond aux beurres botaniques africains pour assouplir les cheveux crépus 4A–4C, sceller l’hydratation et définir vos vanilles sur cheveux naturels.',
+                    durationPlaceholder: 'Durée : À préciser',
+                    pricePlaceholder: 'Tarif : À compléter',
+                    bookBtn: 'Réserver ce soin 4C'
+                }
+            },
+            {
+                id: 'srv-6',
+                category: 'soins',
+                image: 'https://images.unsplash.com/photo-1567532939604-b6b5b0db2604?auto=format&fit=crop&w=800&q=85',
+                en: {
+                    categoryLabel: '4C Natural Hair Treatments',
+                    title: 'Warm Botanical Hot Oil Bath & Cranial Scalp Detox',
+                    description: 'Methodical section-by-section application of warm Protect Your Crown oils paired with a purifying scalp exfoliation and tension-relieving massage.',
+                    durationPlaceholder: 'Duration: To Be Confirmed',
+                    pricePlaceholder: 'Rate: To Be Completed',
+                    bookBtn: 'Book Hot Oil Treatment'
+                },
+                fr: {
+                    categoryLabel: 'Soins Cheveux Crépus 4C',
+                    title: 'Bain d’Huiles Chaudes Botaniques & Détox du Cuir Chevelu',
+                    description: 'Application section par section d’huiles tièdes Protect Your Crown associée à un gommage doux du cuir chevelu et un massage crânien stimulant la pousse.',
+                    durationPlaceholder: 'Durée : À préciser',
+                    pricePlaceholder: 'Tarif : À compléter',
+                    bookBtn: 'Réserver ce bain d’huiles'
+                }
+            },
+            {
+                id: 'srv-7',
+                category: 'entretien',
+                image: 'https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=800&q=85',
+                en: {
+                    categoryLabel: 'Prep, Silk Press & Takedown',
+                    title: 'The Crown Prep Protocol (Wash, Deep Condition, Stretch & Trim)',
+                    description: 'Complete pre-braiding preparation for 4C hair: clarifying shampoo, steam conditioning, tension-free blow-out stretch, dusting trim, and scalp oiling.',
+                    durationPlaceholder: 'Duration: To Be Confirmed',
+                    pricePlaceholder: 'Rate: To Be Completed',
+                    bookBtn: 'Book Crown Prep'
+                },
+                fr: {
+                    categoryLabel: 'Préparation, Silk Press & Dépose',
+                    title: 'Protocole Crown Prep (Shampoing, Soin, Étirage & Pointes)',
+                    description: 'Préparation complète des cheveux crépus avant tressage : lavage clarifiant, soin profond, étirage doux au sèche-cheveux, coupe des pointes et huile protectrice.',
+                    durationPlaceholder: 'Durée : À préciser',
+                    pricePlaceholder: 'Tarif : À compléter',
+                    bookBtn: 'Réserver le Crown Prep'
+                }
+            },
+            {
+                id: 'srv-8',
+                category: 'entretien',
+                image: 'https://images.unsplash.com/photo-1589156280159-27698a70f29e?auto=format&fit=crop&w=800&q=85',
+                en: {
+                    categoryLabel: 'Prep, Silk Press & Takedown',
+                    title: 'Edge & Perimeter Braid Refresh or Safe Anti-Breakage Takedown',
+                    description: 'First two rows touch-up to make your knotless braids look brand new, or patient detangling takedown service with oil slip to prevent post-braid breakage.',
+                    durationPlaceholder: 'Duration: To Be Confirmed',
+                    pricePlaceholder: 'Rate: To Be Completed',
+                    bookBtn: 'Book Refresh or Takedown'
+                },
+                fr: {
+                    categoryLabel: 'Préparation, Silk Press & Dépose',
+                    title: 'Retouche des Contours (2 premiers rangs) ou Dépose Anti-Casse',
+                    description: 'Rafraîchissement du devant et des tempes pour prolonger vos tresses, ou dépose minutieuse avec soin démêlant aux huiles pour éviter toute casse après dépose.',
+                    durationPlaceholder: 'Durée : À préciser',
+                    pricePlaceholder: 'Tarif : À compléter',
+                    bookBtn: 'Réserver Retouche / Dépose'
+                }
+            }
+        ];
+
+        /* ----------------------------------------------------------
+           3. SHOP PRODUCTS DATA (Bilingual EN-US & FR)
+           ---------------------------------------------------------- */
+        const PRODUCTS_DATA = [
+            {
+                id: 'prd-1',
+                category: 'huiles',
+                image: 'https://images.unsplash.com/photo-1608248597359-0e6d526a6c18?auto=format&fit=crop&w=800&q=85',
+                en: {
+                    categoryLabel: 'Hair & Scalp Oil',
+                    name: 'Signature Crown Growth & Scalp Elixir',
+                    description: 'Precision dropper hair oil formulated to nourish the scalp during protective styles, support healthy edges, and lock in lasting moisture. Official ingredient list to be added by the brand.',
+                    formatPlaceholder: 'Size (fl oz / ml): To Be Added',
+                    pricePlaceholder: 'Price: To Be Added',
+                    addBtn: '+ Add to Bag',
+                    buyBtn: 'Order Now'
+                },
+                fr: {
+                    categoryLabel: 'Huile Capillaire & Cuir Chevelu',
+                    name: 'Élixir Signature Pousse & Cuir Chevelu — Protect Your Crown',
+                    description: 'Huile capillaire avec pipette de précision formulée pour nourrir le cuir chevelu sous les tresses, fortifier les tempes et sceller l’hydratation. Liste officielle d’ingrédients à compléter.',
+                    formatPlaceholder: 'Format (ml / fl oz) : À compléter',
+                    pricePlaceholder: 'Prix : À compléter',
+                    addBtn: '+ Sélection',
+                    buyBtn: 'Commander'
+                }
+            },
+            {
+                id: 'prd-2',
+                category: 'huiles',
+                image: 'https://images.unsplash.com/photo-1615397349754-cfa2066a298e?auto=format&fit=crop&w=800&q=85',
+                en: {
+                    categoryLabel: 'Hair & Scalp Oil',
+                    name: 'Soothing Braid & Tension Relief Scalp Oil',
+                    description: 'Lightweight botanical oil blend created to calm freshly braided scalps, relieve dryness, and keep partings clean and luminous.',
+                    formatPlaceholder: 'Size (fl oz / ml): To Be Added',
+                    pricePlaceholder: 'Price: To Be Added',
+                    addBtn: '+ Add to Bag',
+                    buyBtn: 'Order Now'
+                },
+                fr: {
+                    categoryLabel: 'Huile Capillaire & Cuir Chevelu',
+                    name: 'Huile Apaisante Tresses & Confort du Cuir Chevelu',
+                    description: 'Soin huileux léger conçu pour apaiser le cuir chevelu après le tressage, prévenir les tiraillements et sublimer l’éclat de vos tracés.',
+                    formatPlaceholder: 'Format (ml / fl oz) : À compléter',
+                    pricePlaceholder: 'Prix : À compléter',
+                    addBtn: '+ Sélection',
+                    buyBtn: 'Commander'
+                }
+            },
+            {
+                id: 'prd-3',
+                category: 'soins',
+                image: 'https://images.unsplash.com/photo-1556228720-195a672e8a03?auto=format&fit=crop&w=800&q=85',
+                en: {
+                    categoryLabel: 'Crown Care Ritual',
+                    name: 'Moisture Sealing & Length Retention Duo',
+                    description: 'Complementary care ritual designed for 3B–4C natural hair and protective style maintenance. Official specifications to be completed by the house.',
+                    formatPlaceholder: 'Format: To Be Added',
+                    pricePlaceholder: 'Price: To Be Added',
+                    addBtn: '+ Add to Bag',
+                    buyBtn: 'Order Now'
+                },
+                fr: {
+                    categoryLabel: 'Rituel de Soin Couronne',
+                    name: 'Rituel Scellant Hydratation & Rétention de Longueur',
+                    description: 'Soin capillaire complémentaire dédié aux cheveux naturels 3B–4C et à l’entretien des coiffures protectrices. Caractéristiques officielles à renseigner.',
+                    formatPlaceholder: 'Format : À compléter',
+                    pricePlaceholder: 'Prix : À compléter',
+                    addBtn: '+ Sélection',
+                    buyBtn: 'Commander'
+                }
+            }
+        ];
+
+        let cart = [];
+        let activeServiceFilter = 'all';
+        let activeProductFilter = 'all';
+
+        /* ----------------------------------------------------------
+           4. LANGUAGE SWITCHER (EN-US Default / FR Secondary)
+           ---------------------------------------------------------- */
+        function setLanguage(lang) {
+            if (!I18N[lang]) return;
+            currentLang = lang;
+            document.documentElement.lang = lang === 'en' ? 'en-US' : 'fr';
+
+            // Update language switcher buttons
+            document.querySelectorAll('[data-lang-btn]').forEach(btn => {
+                if (btn.dataset.langBtn === lang) {
+                    btn.classList.add('is-active');
+                } else {
+                    btn.classList.remove('is-active');
+                }
+            });
+
+            // Translate all static DOM nodes with data-i18n
+            const dict = I18N[lang];
+            document.querySelectorAll('[data-i18n]').forEach(el => {
+                const key = el.getAttribute('data-i18n');
+                if (dict[key]) {
+                    el.innerHTML = dict[key];
+                }
+            });
+
+            // Update preview mode button label
+            const previewBtn = document.getElementById('toggle-placeholder-btn');
+            if (previewBtn) {
+                previewBtn.textContent = document.body.classList.contains('hide-placeholders')
+                    ? dict['preview.hidden']
+                    : dict['preview.visible'];
+            }
+
+            // Re-render dynamic grids & bag in selected language
+            renderServices(activeServiceFilter);
+            renderProducts(activeProductFilter);
+            updateCartUI();
+
+            setTimeout(() => {
+                updateSlidingTabIndicator('service-tabs-nav', 'service-tab-indicator');
+                updateSlidingTabIndicator('product-tabs-nav', 'product-tab-indicator');
+            }, 40);
+        }
+
+        /* ----------------------------------------------------------
+           5. SLIDING TAB INDICATOR
+           ---------------------------------------------------------- */
+        function updateSlidingTabIndicator(navId, indicatorId) {
+            const nav = document.getElementById(navId);
+            const indicator = document.getElementById(indicatorId);
+            if (!nav || !indicator) return;
+            const activeTab = nav.querySelector('.editorial-tab.is-active');
+            if (!activeTab) return;
+
+            indicator.style.width = `${activeTab.offsetWidth}px`;
+            indicator.style.transform = `translateX(${activeTab.offsetLeft}px)`;
+        }
+
+        /* ----------------------------------------------------------
+           6. RENDER SERVICES & PRODUCTS
+           ---------------------------------------------------------- */
+        function renderServices(filter = 'all') {
+            activeServiceFilter = filter;
+            const grid = document.getElementById('services-grid');
+            if (!grid) return;
+
+            const filtered = filter === 'all' 
+                ? SERVICES_DATA 
+                : SERVICES_DATA.filter(s => s.category === filter);
+
+            grid.innerHTML = filtered.map((service, idx) => {
+                const t = service[currentLang];
+                return `
+                <article class="editorial-card flex flex-col justify-between group reveal-on-scroll is-visible" style="animation: pageReveal 0.65s cubic-bezier(0.19, 1, 0.22, 1) ${idx * 90}ms backwards;">
+                    <div>
+                        <div class="editorial-img-wrap h-64 bg-forest">
+                            <img src="${service.image}" alt="${t.title}" class="w-full h-full object-cover" onerror="this.src='https://placehold.co/600x450/0F291E/C5A059?text=Crown+Service'">
+                            <span class="absolute top-4 left-4 bg-forest/95 text-gold-light text-[10px] uppercase tracking-[0.2em] px-3 py-1.5 border border-gold/30">
+                                ${t.categoryLabel}
+                            </span>
+                        </div>
+                        <div class="p-8 space-y-3">
+                            <h3 class="font-serif text-2xl text-forest font-medium group-hover:text-gold-dark transition-colors">${t.title}</h3>
+                            <p class="text-sm text-charcoal/75 leading-relaxed">${t.description}</p>
+                            <div class="flex flex-wrap gap-2 pt-3">
+                                <span class="placeholder-tag">${t.durationPlaceholder}</span>
+                                <span class="placeholder-tag">${t.pricePlaceholder}</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="p-8 pt-0">
+                        <button onclick="openBookingModal('${t.title.replace(/'/g, "\\'")}')" class="w-full btn-editorial-primary py-3.5 px-5">
+                            <span>${t.bookBtn}</span>
+                            <span class="arrow-glide text-gold-light">
+                                <svg class="arrow-first" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
+                                <svg class="arrow-second" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
+                            </span>
+                        </button>
+                    </div>
+                </article>
+            `}).join('');
+        }
+
+        function filterServices(category) {
+            document.querySelectorAll('.service-filter-btn').forEach(btn => {
+                if (btn.dataset.serviceFilter === category) {
+                    btn.classList.add('is-active');
+                } else {
+                    btn.classList.remove('is-active');
+                }
+            });
+            updateSlidingTabIndicator('service-tabs-nav', 'service-tab-indicator');
+            renderServices(category);
+        }
+
+        function renderProducts(filter = 'all') {
+            activeProductFilter = filter;
+            const grid = document.getElementById('products-grid');
+            if (!grid) return;
+
+            const filtered = filter === 'all'
+                ? PRODUCTS_DATA
+                : PRODUCTS_DATA.filter(p => p.category === filter);
+
+            grid.innerHTML = filtered.map((product, idx) => {
+                const t = product[currentLang];
+                return `
+                <article class="editorial-card flex flex-col justify-between group reveal-on-scroll is-visible" style="animation: pageReveal 0.65s cubic-bezier(0.19, 1, 0.22, 1) ${idx * 90}ms backwards;">
+                    <div>
+                        <div class="editorial-img-wrap h-72 bg-forest">
+                            <img src="${product.image}" alt="${t.name}" class="w-full h-full object-cover" onerror="this.src='https://placehold.co/600x500/0F291E/C5A059?text=Crown+Elixir'">
+                            <span class="absolute top-4 left-4 bg-forest/95 text-gold-light text-[10px] uppercase tracking-[0.2em] px-3 py-1.5 border border-gold/30">
+                                ${t.categoryLabel}
+                            </span>
+                        </div>
+                        <div class="p-8 space-y-3">
+                            <h3 class="font-serif text-2xl text-forest font-medium group-hover:text-gold-dark transition-colors">${t.name}</h3>
+                            <p class="text-sm text-charcoal/75 leading-relaxed">${t.description}</p>
+                            <div class="flex flex-wrap gap-2 pt-3">
+                                <span class="placeholder-tag">${t.formatPlaceholder}</span>
+                                <span class="placeholder-tag">${t.pricePlaceholder}</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="p-8 pt-0 grid grid-cols-2 gap-3">
+                        <button onclick="addToCart('${product.id}', false)" class="btn-editorial-outline text-forest py-3.5 px-3">
+                            <span>${t.addBtn}</span>
+                        </button>
+                        <button onclick="addToCart('${product.id}', true)" class="btn-editorial-primary py-3.5 px-3">
+                            <span>${t.buyBtn}</span>
+                            <span class="arrow-glide text-gold-light">
+                                <svg class="arrow-first" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
+                                <svg class="arrow-second" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
+                            </span>
+                        </button>
+                    </div>
+                </article>
+            `}).join('');
+        }
+
+        function filterProducts(category) {
+            document.querySelectorAll('.product-filter-btn').forEach(btn => {
+                if (btn.dataset.productFilter === category) {
+                    btn.classList.add('is-active');
+                } else {
+                    btn.classList.remove('is-active');
+                }
+            });
+            updateSlidingTabIndicator('product-tabs-nav', 'product-tab-indicator');
+            renderProducts(category);
+        }
+
+        /* ----------------------------------------------------------
+           7. SHOPPING BAG & ORDER INQUIRY
+           ---------------------------------------------------------- */
+        function addToCart(productId, openImmediately = false) {
+            const product = PRODUCTS_DATA.find(p => p.id === productId);
+            if (!product) return;
+
+            const existing = cart.find(item => item.id === productId);
+            if (existing) {
+                existing.qty += 1;
+            } else {
+                cart.push({ id: product.id, qty: 1 });
+            }
+
+            updateCartUI();
+            const prodTitle = product[currentLang].name;
+            if (openImmediately) {
+                toggleCartDrawer(true);
+                showCheckoutForm();
+            } else {
+                const msg = currentLang === 'en'
+                    ? `“${prodTitle}” added to your selection.`
+                    : `« ${prodTitle} » ajouté à votre sélection.`;
+                showToast(msg);
+            }
+        }
+
+        function updateCartQuantity(productId, delta) {
+            const index = cart.findIndex(item => item.id === productId);
+            if (index === -1) return;
+
+            cart[index].qty += delta;
+            if (cart[index].qty <= 0) {
+                cart.splice(index, 1);
+            }
+            updateCartUI();
+        }
+
+        function updateCartUI() {
+            const totalItems = cart.reduce((acc, item) => acc + item.qty, 0);
+            document.getElementById('cart-badge').textContent = totalItems;
+            document.getElementById('cart-badge-mobile').textContent = totalItems;
+
+            const container = document.getElementById('cart-items-container');
+            const proceedBtn = document.getElementById('proceed-checkout-btn');
+            const checkoutForm = document.getElementById('checkout-form');
+            const dict = I18N[currentLang];
+
+            if (cart.length === 0) {
+                container.innerHTML = `
+                    <div class="text-center py-12 space-y-3">
+                        <p class="font-serif text-2xl text-forest">${dict['bag.emptyTitle']}</p>
+                        <p class="text-xs text-charcoal/70">${dict['bag.emptySub']}</p>
+                    </div>
+                `;
+                proceedBtn.classList.add('hidden');
+                checkoutForm.classList.add('hidden');
+                return;
+            }
+
+            proceedBtn.classList.remove('hidden');
+            container.innerHTML = cart.map(cartItem => {
+                const product = PRODUCTS_DATA.find(p => p.id === cartItem.id);
+                const t = product[currentLang];
+                return `
+                <div class="flex items-center gap-4 p-3.5 rounded-[2px] bg-white border gold-border">
+                    <img src="${product.image}" alt="${t.name}" class="w-16 h-16 rounded-[2px] object-cover bg-forest shrink-0">
+                    <div class="flex-grow">
+                        <h4 class="font-serif text-lg text-forest leading-snug">${t.name}</h4>
+                        <span class="placeholder-tag mt-1">${t.pricePlaceholder}</span>
+                        <div class="flex items-center gap-3 mt-2">
+                            <button onclick="updateCartQuantity('${product.id}', -1)" class="w-6 h-6 rounded-[2px] bg-ivory-warm text-forest text-xs font-bold active:scale-[0.985]">-</button>
+                            <span class="text-xs font-semibold">${cartItem.qty}</span>
+                            <button onclick="updateCartQuantity('${product.id}', 1)" class="w-6 h-6 rounded-[2px] bg-ivory-warm text-forest text-xs font-bold active:scale-[0.985]">+</button>
+                        </div>
+                    </div>
+                </div>
+            `}).join('');
+        }
+
+        function toggleCartDrawer(show) {
+            const drawer = document.getElementById('cart-drawer');
+            if (show) {
+                drawer.classList.remove('hidden');
+                document.getElementById('order-feedback').classList.add('hidden');
+            } else {
+                drawer.classList.add('hidden');
+            }
+        }
+
+        function showCheckoutForm() {
+            if (cart.length === 0) return;
+            document.getElementById('checkout-form').classList.remove('hidden');
+            document.getElementById('proceed-checkout-btn').classList.add('hidden');
+        }
+
+        function handleOrderSubmit(e) {
+            e.preventDefault();
+            const name = document.getElementById('order-name').value.trim();
+            const email = document.getElementById('order-email').value.trim();
+            const feedback = document.getElementById('order-feedback');
+
+            if (currentLang === 'en') {
+                feedback.innerHTML = `
+                    <p class="font-serif text-lg text-gold-light mb-1">Order Inquiry Received</p>
+                    <p class="text-xs text-ivory/90 leading-relaxed">
+                        Thank you, <strong>${name}</strong>. Your selection has been recorded. Once the apothecary catalog is finalized, we will email <strong>${email}</strong> with confirmed pricing and your secure checkout link.
+                    </p>
+                `;
+            } else {
+                feedback.innerHTML = `
+                    <p class="font-serif text-lg text-gold-light mb-1">Demande de commande enregistrée</p>
+                    <p class="text-xs text-ivory/90 leading-relaxed">
+                        Merci <strong>${name}</strong>. Votre sélection a bien été préparée. Dès la validation finale du catalogue, vous recevrez à l’adresse <strong>${email}</strong> les détails tarifaires et le lien de paiement sécurisé.
+                    </p>
+                `;
+            }
+            feedback.classList.remove('hidden');
+            cart = [];
+            updateCartUI();
+            e.target.reset();
+        }
+
+        /* ----------------------------------------------------------
+           8. SPA NAVIGATION & MODAL FORMS
+           ---------------------------------------------------------- */
+        function navigateTo(pageId) {
+            document.querySelectorAll('.page-section').forEach(sec => sec.classList.remove('active'));
+            const target = document.getElementById(`page-${pageId}`);
+            if (target) target.classList.add('active');
+
+            document.querySelectorAll('.nav-link').forEach(link => {
+                if (link.dataset.nav === pageId) {
+                    link.classList.add('is-active', 'text-forest');
+                    link.classList.remove('text-charcoal/70');
+                } else {
+                    link.classList.remove('is-active', 'text-forest');
+                    link.classList.add('text-charcoal/70');
+                }
+            });
+
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+
+            setTimeout(() => {
+                updateSlidingTabIndicator('service-tabs-nav', 'service-tab-indicator');
+                updateSlidingTabIndicator('product-tabs-nav', 'product-tab-indicator');
+                observeScrollElements();
+            }, 60);
+        }
+
+        function toggleMobileMenu() {
+            document.getElementById('mobile-menu').classList.toggle('hidden');
+        }
+
+        function openBookingModal(preselectedService) {
+            const modal = document.getElementById('booking-modal');
+            const serviceInput = document.getElementById('booking-service');
+            const feedback = document.getElementById('booking-feedback');
+            const defaultLabel = currentLang === 'en'
+                ? 'Knotless Braids / Protective Styling Consultation'
+                : 'Consultation Knotless Braids & Coiffure Protectrice';
+            if (serviceInput) serviceInput.value = preselectedService || defaultLabel;
+            if (feedback) feedback.classList.add('hidden');
+            modal.classList.remove('hidden');
+        }
+
+        function closeBookingModal() {
+            document.getElementById('booking-modal').classList.add('hidden');
+        }
+
+        function handleBookingSubmit(e) {
+            e.preventDefault();
+            const service = document.getElementById('booking-service').value.trim();
+            const date = document.getElementById('booking-date').value;
+            const slot = document.getElementById('booking-slot').value;
+            const name = document.getElementById('booking-name').value.trim();
+            const feedback = document.getElementById('booking-feedback');
+
+            feedback.className = 'p-4 rounded-[2px] bg-forest text-ivory border border-gold/40 text-xs leading-relaxed';
+            if (currentLang === 'en') {
+                feedback.innerHTML = `
+                    <strong class="text-gold-light block font-serif text-base mb-1">Appointment Request Recorded</strong>
+                    Thank you, <strong>${name}</strong>. Your request for <em>“${service}”</em> (${date} — ${slot}) has been received. Protect Your Crown Beauty.Co will reach out to confirm your slot and bespoke quote.
+                `;
+            } else {
+                feedback.innerHTML = `
+                    <strong class="text-gold-light block font-serif text-base mb-1">Demande de créneau enregistrée</strong>
+                    Merci <strong>${name}</strong>. Votre souhait de rendez-vous pour <em>« ${service} »</em> (${date} — ${slot}) est bien pris en compte. L’équipe Protect Your Crown Beauty.Co vous recontactera pour confirmer l’horaire et le devis.
+                `;
+            }
+            feedback.classList.remove('hidden');
+            e.target.reset();
+            document.getElementById('booking-service').value = service;
+        }
+
+        function handleContactSubmit(e) {
+            e.preventDefault();
+            const name = document.getElementById('contact-name').value.trim();
+            const email = document.getElementById('contact-email').value.trim();
+            const subject = document.getElementById('contact-subject').value;
+            const message = document.getElementById('contact-message').value.trim();
+            const consent = document.getElementById('contact-consent').checked;
+            const feedback = document.getElementById('contact-feedback');
+
+            if (!name || !email || !subject || !message || !consent) {
+                feedback.className = 'p-4 rounded-[2px] bg-ivory-warm border-l-2 border-gold text-forest text-xs';
+                feedback.textContent = currentLang === 'en'
+                    ? 'Please complete all required fields (*) and accept the privacy policy.'
+                    : 'Veuillez renseigner tous les champs obligatoires (*) et accepter la politique de confidentialité.';
+                feedback.classList.remove('hidden');
+                return;
+            }
+
+            feedback.className = 'p-4 rounded-[2px] bg-forest text-ivory border border-gold/40 text-xs leading-relaxed';
+            feedback.innerHTML = currentLang === 'en'
+                ? `<strong class="text-gold-light block font-serif text-base mb-1">Inquiry Sent Successfully</strong>Thank you, <strong>${name}</strong>. We have received your message regarding <em>“${subject}”</em> and will reply at <strong>${email}</strong>.`
+                : `<strong class="text-gold-light block font-serif text-base mb-1">Message transmis avec succès</strong>Merci <strong>${name}</strong>. Votre demande concernant <em>« ${subject} »</em> a bien été enregistrée. Nous vous répondrons à l’adresse <strong>${email}</strong>.`;
+            feedback.classList.remove('hidden');
+            e.target.reset();
+        }
+
+        function openCookieBanner() {
+            document.getElementById('cookie-banner').classList.remove('hidden');
+        }
+
+        function saveCookieChoice(choice) {
+            document.getElementById('cookie-banner').classList.add('hidden');
+            if (currentLang === 'en') {
+                showToast(choice === 'accepted' ? 'Cookie preferences saved.' : 'Essential cookies only enabled.');
+            } else {
+                showToast(choice === 'accepted' ? 'Préférences de cookies enregistrées.' : 'Seuls les cookies essentiels sont activés.');
+            }
+        }
+
+        function showToast(message) {
+            const toast = document.getElementById('toast-notification');
+            const text = document.getElementById('toast-message');
+            text.textContent = message;
+            toast.classList.remove('hidden');
+            setTimeout(() => toast.classList.add('hidden'), 3400);
+        }
+
+        function toggleEditorialPlaceholders() {
+            document.body.classList.toggle('hide-placeholders');
+            const btn = document.getElementById('toggle-placeholder-btn');
+            const dict = I18N[currentLang];
+            btn.textContent = document.body.classList.contains('hide-placeholders')
+                ? dict['preview.hidden']
+                : dict['preview.visible'];
+        }
+
+        /* Scroll Reveal Observer */
+        let scrollObserver = null;
+        function observeScrollElements() {
+            const elements = document.querySelectorAll('.reveal-on-scroll:not(.is-visible)');
+            if (!('IntersectionObserver' in window)) {
+                elements.forEach(el => el.classList.add('is-visible'));
+                return;
+            }
+            if (!scrollObserver) {
+                scrollObserver = new IntersectionObserver((entries) => {
+                    entries.forEach(entry => {
+                        if (entry.isIntersecting) {
+                            entry.target.classList.add('is-visible');
+                            scrollObserver.unobserve(entry.target);
+                        }
+                    });
+                }, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
+            }
+            elements.forEach(el => scrollObserver.observe(el));
+        }
+
+        window.addEventListener('scroll', () => {
+            const scrollTop = window.scrollY || document.documentElement.scrollTop;
+            const docHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+            const progress = docHeight > 0 ? (scrollTop / docHeight) * 100 : 0;
+            const progressBar = document.getElementById('scroll-progress');
+            if (progressBar) progressBar.style.width = `${progress}%`;
+
+            const headerInner = document.getElementById('header-inner');
+            if (headerInner) {
+                if (scrollTop > 40) {
+                    headerInner.classList.remove('h-24');
+                    headerInner.classList.add('h-16');
+                } else {
+                    headerInner.classList.add('h-24');
+                    headerInner.classList.remove('h-16');
+                }
+            }
+        }, { passive: true });
+
+        window.addEventListener('resize', () => {
+            updateSlidingTabIndicator('service-tabs-nav', 'service-tab-indicator');
+            updateSlidingTabIndicator('product-tabs-nav', 'product-tab-indicator');
+        });
+
+        window.addEventListener('DOMContentLoaded', () => {
+            const yearEl = document.getElementById('current-year');
+            if (yearEl) yearEl.textContent = new Date().getFullYear();
+
+            setLanguage('en'); // Initialize in American English by default
+            observeScrollElements();
+
+            setTimeout(() => {
+                updateSlidingTabIndicator('service-tabs-nav', 'service-tab-indicator');
+                updateSlidingTabIndicator('product-tabs-nav', 'product-tab-indicator');
+            }, 100);
+        });
+    </script>
+</body>
+</html>

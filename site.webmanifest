@@ -1,0 +1,32 @@
+{
+  "name": "Protect Your Crown Beauty.Co",
+  "short_name": "Protect Your Crown",
+  "description": "Luxury African hair braiding, 4C natural crown care & botanical oils.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#FAF7F2",
+  "theme_color": "#0F291E",
+  "lang": "en-US",
+  "icons": [
+    {
+      "src": "assets/logo-64.png",
+      "sizes": "64x64",
+      "type": "image/png"
+    },
+    {
+      "src": "assets/logo-128.png",
+      "sizes": "128x128",
+      "type": "image/png"
+    },
+    {
+      "src": "assets/logo-256.png",
+      "sizes": "256x256",
+      "type": "image/png"
+    },
+    {
+      "src": "assets/logo-512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}

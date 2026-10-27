@@ -1,0 +1,11 @@
+{
+  "name": "protect-your-crown",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Protect Your Crown Beauty.Co — luxury African hair braiding & botanical care website",
+  "scripts": {
+    "start": "npx --yes serve . -l 3000",
+    "dev": "npx --yes serve . -l 3000",
+    "serve:ps": "powershell -NoProfile -ExecutionPolicy Bypass -File ./serve.ps1 -Port 3000"
+  }
+}

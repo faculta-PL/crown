@@ -1,0 +1,31 @@
+{
+  "name": "Protect Your Crown Beauty.Co",
+  "tagline": {
+    "en": "Luxury African hair braiding, 4C natural crown care & botanical oils",
+    "fr": "Haute coiffure femme noire et africaine, tressage protecteur & huiles botaniques"
+  },
+  "colors": {
+    "forest": "#0F291E",
+    "gold": "#C5A059",
+    "ivory": "#FAF7F2",
+    "charcoal": "#1C2420"
+  },
+  "contact": {
+    "email": null,
+    "phone": null,
+    "address": null,
+    "hours": null,
+    "instagram": null,
+    "tiktok": null
+  },
+  "pages": [
+    "accueil",
+    "prestations",
+    "boutique",
+    "apropos",
+    "contact",
+    "mentions"
+  ],
+  "languages": ["en", "fr"],
+  "defaultLanguage": "en"
+}

@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="Protect Your Crown">
+  <rect width="64" height="64" fill="#0F291E"/>
+  <path d="M12 44L18 22L27 33L32 16L37 33L46 22L52 44H12Z" stroke="#C5A059" stroke-width="2.2" stroke-linejoin="round" fill="none"/>
+  <path d="M10 49H54" stroke="#C5A059" stroke-width="2.2" stroke-linecap="round"/>
+  <circle cx="32" cy="11" r="2.5" fill="#C5A059"/>
+  <circle cx="17" cy="17" r="2" fill="#C5A059"/>
+  <circle cx="47" cy="17" r="2" fill="#C5A059"/>
+</svg>
